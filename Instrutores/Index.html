@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página do instrutor Carlos Eduardo (Cadu), especialista em Atendimento Pré-Hospitalar e Resgate Rodoviário." />
+  <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+  <title>Instrutores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="APH - Suporte Básico de Vida">
+    <meta property="og:description" content="Material de apoio para o curso de APH.">
+    <meta property="og:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    <meta property="og:url" content="https://cadudev99.github.io/Aula/">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APH - Suporte Básico de Vida">
+    <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
+    <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    
+    <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* fundo branco */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e1e1e;
+  padding: 40px 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #a50000;
+  background: linear-gradient(to right, #8b0000, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.instrutores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.instrutor-container {
+  background-image: linear-gradient(#f9f9f9, #dfdfdf);
+  border: 2px solid #d0d0d0;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 15px #00000069;
+  border: 2px solid red;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 400px;
+  max-width: 450px;
+  cursor: pointer;
+}
+
+.instrutor-img {
+  margin-bottom: 25px;
+}
+
+.instrutor-img img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #79ff19;
+  box-shadow: 0 0 5px #0000006b;
+  transition: transform 0.3s ease-in-out;
+}
+
+.instrutor-info p {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333333;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #a50000;
+  border-left: 4px solid #a50000;
+  padding-left: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.formacao li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #0057ff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #0057ff;
+}
+
+.experiencia li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #e60000;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #e60000;
+}
+
+.experiencia p {
+  color: #b30000;
+  font-weight: bold;
+  text-align: left;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.button-container a,
+.button-container1 a {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #d70000;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  text-align: center;
+  min-width: 120px;
+}
+
+.button-container a:hover {
+  background-color: #ff5cab;
+  box-shadow: 0 0 15px #ff5cab;
+}
+
+.button-container1 a:hover {
+  background-color: #970000;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .instrutor-img img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .instrutor-info p {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Instrutores</h1>
+
+    <div class="instrutores">
+      <section class="instrutor-container">
+        <div class="instrutor-img">
+          <img src="../assets/Cadu.png" alt="Foto do instrutor Carlos Eduardo (Cadu)">
+        </div>
+        <div class="instrutor-info">
+          <p><strong>Nome:</strong> Carlos Eduardo (Cadu)</p>
+          <p><strong>Idade:</strong> 25 anos</p>
+          <p class="section-title">Formação:</p>
+          <ul class="formacao">
+            <li>226 horas - APH/BLS (Suporte Básico de Vida)</li>
+            <li>24 horas - APH/ATLS (Suporte Avançado de Vida no Trauma)</li>
+            <li>20 horas - APH/March 1 (Atendimento a feridos em Ambientes de Combate)</li>
+            <li>Método START - São Francisco Resgate / Caldas MG</li>
+            <li>Busca e Resgate em Ambientes Remotos e Hostis - Emergency Fire / Cajuru SP</li>
+            <li>Resgate em Ribanceira - São Francisco Resgate / Caldas MG</li>
+            <li>Resgate com Produtos Perigosos - São Francisco Resgate / Caldas MG</li>
+            <li>Resgate em Altura - São Francisco Resgate / Caldas MG</li>
+            <li>Combate a Princípios de Incêndio - São Francisco Resgate / Caldas MG</li>
+            <li>Desencarceramento Leve - São Francisco Resgate / Caldas MG</li>
+          </ul>
+          <p class="section-title">Experiência:</p>
+          <div class="experiencia">
+            <p>2 anos com Resgate Rodoviário</p>
+            <ul class="experiencia">
+              <li>Arteris Fernão Dias (BR381)</li>
+              <li>EPR Sul de Minas (BR459, MG173, MG290)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn">
+          <div class="button-container">
+            <a href="https://www.instagram.com/resgate.cadu" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="instrutor-container">
+        <div class="instrutor-img">
+          <img src="../assets/tiago.jpg" alt="Foto do instrutor Tiago Renan">
+        </div>
+        <div class="instrutor-info">
+          <p><strong>Nome:</strong> Tiago Renan</p>
+          <p><strong>Idade:</strong> 35 anos</p>
+          <p class="section-title">Formação:</p>
+          <ul class="formacao">
+            <li>240 horas - APH/BLS (Suporte Básico de Vida)</li>
+          </ul>
+          <p class="section-title">Experiência:</p>
+          <div class="experiencia">
+            <p>3 anos com Resgate Rodoviário</p>
+            <ul class="experiencia">
+              <li>Arteris Fernão Dias (BR381)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn">
+          <div class="button-container">
+            <a href="https://www.instagram.com/tiagor.mariano/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="btn">
+      <div class="button-container1">
+        <a href="../index.html">Voltar</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

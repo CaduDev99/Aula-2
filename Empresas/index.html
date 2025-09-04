@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+  <title>Empresas</title>
+
+  <meta property="og:title" content="APH - Suporte Básico de Vida">
+    <meta property="og:description" content="Material de apoio para o curso de APH.">
+    <meta property="og:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    <meta property="og:url" content="https://cadudev99.github.io/Aula/">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APH - Suporte Básico de Vida">
+    <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
+    <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #dddddd;
+      color: #000000;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-image: linear-gradient(to top, #A4161A, #820b0f);
+      color: #ffffff;
+      font-size: 2rem;
+      border-bottom: 2px solid #ff0000;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    div.empresa {
+      background-color: #ececec;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 2px solid #ff0000;
+      transition: transform 0.3s ease;
+    }
+
+    div.empresa img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #ff0000;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      color: #c50000;
+      margin: 5px 0;
+    }
+
+    p {
+      color: #000000;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 5px 0;
+      color: #000000;
+    }
+
+    a {
+      color: #343434;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff0000;
+    }
+
+    .voltar-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.botao-voltar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff0000;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #aa0000;
+  color: white;
+}
+
+.h2{
+  display: flex;
+
+}
+
+.br{
+      color: #491fa6;
+      margin-bottom: 5px;
+      text-shadow: 0 0 5px #491fa6;
+}
+
+.vida{
+      color: #e91212;
+      margin-bottom: 5px;
+      text-shadow: 0 0 5px #e91212;
+}
+
+.sf{
+  color: rgb(255, 255, 0);
+  text-shadow: 0px 0px 10px rgb(0, 8, 255);
+}
+
+ @media (max-width: 768px) {
+  section {
+    padding: 15px;
+    background-color: red;
+  }
+}
+  </style>
+</head>
+<body>
+  <h1>Empresas que atuam com APH</h1>
+
+  <section>
+    <div class="empresa">
+      <div>
+        <div class="h2">
+          <h2 class="br">BR</h2><h2 class="vida">vida</h2>
+        </div>
+        <p>Capacitação e Atuação em APH e Resgate</p>
+        <h2>Contato:</h2>
+        <ul>
+          <li>Tel: (35) 3422-4001</li>
+          <li>Site: <a href="https://brvidaaph.com.br/">https://brvidaaph.com.br/</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/brvida.aph/">@brvida.aph</a></li>
+        </ul>
+        <h2>Atuando em:</h2>
+        <h3>Arteris Fernão Dias</h3>
+        <p>Tel: 0800 283 0381</p>
+      </div>
+    </div>
+
+    <div class="empresa">
+      <h2 class="sf">São Fransisco Resgate - Grupo Elo</h2>
+      <p>Atendimento Pré-hospitalar 🛣️ Rodoviário | 🌆 Urbano | ✈️ Aeroportuário</p>
+      <h2>Contato:</h2>
+      <ul>
+        <li>Email comercial: comercial@elo-ci.com.br</li>
+      </ul>
+
+      <h2>Atuando em:</h2>
+      <div>
+        <h3>EPR Sul de Minas</h3>
+        <p>Tel: 0800 290 0459</p>
+      </div>
+      <div>
+        <h3>EPR Vias do Café</h3>
+        <p>Tel: 0800 265 0491</p>
+      </div>
+    </div>
+  </section>
+  <div class="voltar-container">
+  <a href="../index.html" class="botao-voltar">Voltar para a Página Inicial</a>
+</div>
+</body>
+</html>

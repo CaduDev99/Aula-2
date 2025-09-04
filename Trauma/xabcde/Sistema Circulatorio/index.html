@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+    <title>Sistema Circulatório</title>
+
+    <meta property="og:title" content="APH - Suporte Básico de Vida">
+    <meta property="og:description" content="Material de apoio para o curso de APH.">
+    <meta property="og:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    <meta property="og:url" content="https://cadudev99.github.io/Aula/">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APH - Suporte Básico de Vida">
+    <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
+    <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    
+    <style>
+    @charset "UTF-8";
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #222222;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+        text-indent: 30px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        background: linear-gradient(to right, #8B0000, #FF4500);
+        padding: 20px 0;
+        border-radius: 10px;
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    h2 {
+        color: #3333ff;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #3333ff;
+        padding-bottom: 5px;
+    }
+
+    h3 {
+        color: #ff4500;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        text-indent: 0;
+    }
+
+    main {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    li.image-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    li.image-item img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .button-container, .voltar-inicio {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    a {
+        background-color: #ff4500;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        box-shadow: 0 0 10px rgba(255,69,0,0.7);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a:hover {
+        background-color: #ff6347;
+        box-shadow: 0 0 15px rgba(255,99,71,0.7);
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Sistema Circulatório</h1>
+    </header>
+    <main>
+        <section class="X">
+            <h2>1. Introdução ao Sistema Circulatório</h2>
+            <p>O sistema circulatório, também conhecido como sistema cardiovascular, é um dos sistemas mais essenciais do corpo humano, responsável por transportar <b>nutrientes</b>, <b>oxigênio</b>, <b>hormônios</b> e outros compostos vitais para as células, além de remover resíduos metabólicos, como <b>dióxido de carbono</b>. Ele também desempenha papéis fundamentais na regulação da temperatura corporal, na resposta imune e na manutenção do equilíbrio de fluidos.</p>
+            <p>O sistema circulatório humano é classificado como <b>duplo</b> (composto por duas circulações distintas: pulmonar e sistêmica) e <b>fechado</b> (o sangue permanece dentro dos vasos). Ele é composto por três elementos principais:</p>
+            <ul>
+                <li><b>Coração</b>: O órgão central que atua como uma bomba, impulsionando o sangue.</li>
+                <li><b>Vasos sanguíneos</b>: Rede de tubos (artérias, veias e capilares) que transportam o sangue.</li>
+                <li><b>Sangue</b>: O fluido que carrega nutrientes, gases e resíduos.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Diagrama ilustrativo do sistema circulatório
+                    <img src="../assets/Sistema circulatorio.jpg" alt="Diagrama do sistema circulatório">
+                </li>
+            </ul>
+        </section>
+
+        <section class="A">
+            <h2>2. Componentes do Sistema Circulatório</h2>
+            <h3>2.1. Coração</h3>
+            <p>O coração é um órgão muscular, aproximadamente do tamanho de um punho fechado, localizado no centro do tórax, ligeiramente inclinado à esquerda. Ele é dividido em quatro câmaras:</p>
+            <ul>
+                <li><b>Átrios</b>: Duas câmaras superiores (átrio direito e átrio esquerdo) que recebem sangue.</li>
+                <li><b>Ventrículos</b>: Duas câmaras inferiores (ventrículo direito e ventrículo esquerdo) que bombeiam sangue.</li>
+            </ul>
+            <h3>Estrutura do Coração</h3>
+            <ul>
+                <li><b>Pericárdio</b>: Membrana dupla que envolve o coração, protegendo-o e reduzindo o atrito durante os batimentos.</li>
+                <li><b>Miocárdio</b>: Camada muscular espessa responsável pela contração do coração.</li>
+                <li><b>Endocárdio</b>: Camada interna lisa que entra em contato com o sangue.</li>
+                <li><b>Válvulas cardíacas</b>: Estruturas que garantem o fluxo unidirecional do sangue:
+                    <ul>
+                        <li><b>Válvulas atrioventriculares</b>: Tricúspide (entre o átrio direito e o ventrículo direito) e mitral (entre o átrio esquerdo e o ventrículo esquerdo).</li>
+                        <li><b>Válvulas semilunares</b>: Pulmonar (saída do ventrículo direito) e aórtica (saída do ventrículo esquerdo).</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Funcionamento</h3>
+            <p>O coração funciona como uma bomba dupla:</p>
+            <ul>
+                <li>O <b>lado direito</b> bombeia sangue <b>desoxigenado</b> para os pulmões (circulação pulmonar).</li>
+                <li>O <b>lado esquerdo</b> bombeia sangue <b>oxigenado</b> para o resto do corpo (circulação sistêmica).</li>
+            </ul>
+            <p>O ciclo cardíaco consiste em duas fases:</p>
+            <ul>
+                <li><b>Sístole</b>: Contração dos ventrículos, que ejeta sangue para as artérias.</li>
+                <li><b>Diástole</b>: Relaxamento dos ventrículos, quando o coração se enche de sangue.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Estrutura do coração humano
+                    <img src="../assets/coração.png" alt="Estrutura do coração">
+                </li>
+            </ul>
+            <h3>2.2. Vasos Sanguíneos</h3>
+            <p>Os vasos sanguíneos formam uma rede extensa que transporta o sangue pelo corpo. Eles são classificados em três tipos principais:</p>
+            <h4>Artérias</h4>
+            <ul>
+                <li><b>Função</b>: Transportam sangue oxigenado do coração para os tecidos.</li>
+                <li><b>Estrutura</b>: Paredes espessas e elásticas para suportar alta pressão.</li>
+                <li><b>Exemplo principal</b>: A aorta, que distribui sangue para todo o corpo.</li>
+                <li><b>Características</b>: Geralmente levam sangue oxigenado, exceto as artérias pulmonares, que transportam sangue desoxigenado para os pulmões.</li>
+            </ul>
+            <h4>Capilares</h4>
+            <ul>
+                <li><b>Função</b>: Permitem a troca de oxigênio, nutrientes e resíduos entre o sangue e os tecidos.</li>
+                <li><b>Estrutura</b>: Paredes finas (uma única camada de células), ideais para difusão.</li>
+                <li><b>Localização</b>: Estão presentes em todos os tecidos do corpo, formando redes capilares.</li>
+            </ul>
+            <h4>Veias</h4>
+            <ul>
+                <li><b>Função</b>: Retornam sangue desoxigenado ao coração.</li>
+                <li><b>Estrutura</b>: Paredes mais finas e menos elásticas que as artérias, com válvulas internas para evitar o refluxo.</li>
+                <li><b>Exemplo principal</b>: Veias cavas (superior e inferior), que levam sangue ao átrio direito.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Tipos de vasos sanguíneos
+                    <img src="../assets/vasos.jpg" alt="Tipos de vasos sanguíneos">
+                </li>
+            </ul>
+            <h3>2.3. Sangue</h3>
+            <p>O sangue é um tecido conjuntivo líquido composto por:</p>
+            <ul>
+                <li><b>Plasma</b> (55%): Parte líquida, composta por água, eletrólitos, proteínas (como albumina e globulinas) e outras moléculas.</li>
+                <li><b>Elementos figurados</b> (45%):
+                    <ul>
+                        <li><b>Hemácias</b> (glóbulos vermelhos): Transportam oxigênio via hemoglobina.</li>
+                        <li><b>Leucócitos</b> (glóbulos brancos): Atuam na defesa imunológica.</li>
+                        <li><b>Plaquetas</b>: Responsáveis pela coagulação.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Funções do Sangue</h4>
+            <ul>
+                <li>Transporte de oxigênio e nutrientes.</li>
+                <li>Remoção de dióxido de carbono e resíduos metabólicos.</li>
+                <li>Regulação da temperatura e do pH.</li>
+                <li>Transporte de hormônios e enzimas.</li>
+                <li>Defesa contra infecções.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Composição do sangue
+                    <img src="../assets/sangue.png" alt="Composição do sangue">
+                </li>
+            </ul>
+        </section>
+
+        <section class="B">
+            <h2>3. Tipos de Circulação</h2>
+            <h3>3.1. Circulação Pulmonar</h3>
+            <ul>
+                <li><b>Trajeto</b>: Sangue desoxigenado sai do ventrículo direito, passa pelas artérias pulmonares, chega aos pulmões, onde é oxigenado, e retorna ao átrio esquerdo pelas veias pulmonares.</li>
+                <li><b>Função</b>: Oxigenar o sangue e eliminar dióxido de carbono.</li>
+            </ul>
+            <h3>3.2. Circulação Sistêmica</h3>
+            <ul>
+                <li><b>Trajeto</b>: Sangue oxigenado sai do ventrículo esquerdo pela aorta, distribui-se pelos tecidos via artérias, arteríolas e capilares, e retorna ao átrio direito pelas veias.</li>
+                <li><b>Função</b>: Fornecer oxigênio e nutrientes aos tecidos e coletar resíduos.</li>
+            </ul>
+            <h3>3.3. Circulação Coronariana</h3>
+            <ul>
+                <li><b>Descrição</b>: Subtipo da circulação sistêmica, irriga o próprio músculo cardíaco por meio das artérias coronárias.</li>
+                <li><b>Importância</b>: Qualquer obstrução pode causar isquemia ou infarto do miocárdio.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Fluxo da circulação pulmonar e sistêmica
+                    <img src="../assets/sistemica.jpg" alt="Circulação pulmonar e sistêmica">
+                </li>
+            </ul>
+        </section>
+
+        <section class="C">
+            <h2>4. Regulação do Sistema Circulatório</h2>
+            <h3>4.1. Regulação Cardíaca</h3>
+            <ul>
+                <li><b>Sistema nervoso autônomo</b>:
+                    <ul>
+                        <li><b>Simpático</b>: Aumenta a frequência e a força dos batimentos (ex.: durante exercício).</li>
+                        <li><b>Parassimpático</b>: Reduz a frequência cardíaca (ex.: em repouso).</li>
+                    </ul>
+                </li>
+                <li><b>Hormônios</b>: Adrenalina e noradrenalina aumentam a atividade cardíaca.</li>
+                <li><b>Nó sinusal</b>: Gerador de impulsos elétricos que inicia os batimentos.</li>
+            </ul>
+            <h3>4.2. Regulação da Pressão Arterial</h3>
+            <ul>
+                <li><b>Barorreceptores</b>: Sensores nas artérias que detectam mudanças na pressão e ajustam o sistema nervoso.</li>
+                <li><b>Sistema renina-angiotensina-aldosterona</b>: Regula o volume de sangue e a pressão arterial.</li>
+                <li><b>Vasos sanguíneos</b>: Vasoconstrição (reduz diâmetro dos vasos) ou vasodilatação (aumenta diâmetro) ajustam a pressão.</li>
+            </ul>
+        </section>
+
+        <section class="D">
+            <h2>5. Fisiologia do Sistema Circulatório</h2>
+            <h3>5.1. Ciclo Cardíaco</h3>
+            <ul>
+                <li><b>Sístole ventricular</b>: Ejeção de ~70 mL de sangue por batimento (débito sistólico).</li>
+                <li><b>Diástole</b>: Enchimento dos ventrículos.</li>
+                <li><b>Frequência cardíaca</b>: Em média, 60-100 batimentos por minuto em repouso.</li>
+            </ul>
+            <h3>5.2. Volume Sanguíneo</h3>
+            <ul>
+                <li>Um adulto possui cerca de 5-6 litros de sangue.</li>
+                <li>O débito cardíaco (volume de sangue bombeado por minuto) é calculado como:
+                    <p>\[ \text{Débito Cardíaco} = \text{Frequência Cardíaca} \times \text{Volume Sistólico} \]</p>
+                </li>
+            </ul>
+            <h3>5.3. Trocas nos Capilares</h3>
+            <ul>
+                <li><b>Difusão</b>: Oxigênio e nutrientes saem do sangue para os tecidos; CO₂ e resíduos entram no sangue.</li>
+                <li><b>Pressão hidrostática e osmótica</b>: Regulam o movimento de fluidos nos capilares.</li>
+            </ul>
+            <ul>
+                <li class="image-item">
+                    Ciclo cardíaco e trocas capilares
+                    <img src="../assets/ciclo.jpg" alt="Ciclo cardíaco">
+                </li>
+            </ul>
+        </section>
+
+        <section class="E">
+            <h2>6. Patologias do Sistema Circulatório</h2>
+            <p>Algumas condições comuns incluem:</p>
+            <ul>
+                <li><b>Hipertensão</b>: Pressão arterial cronicamente elevada.</li>
+                <li><b>Aterosclerose</b>: Acúmulo de placas nas artérias, podendo levar a infarto ou AVC.</li>
+                <li><b>Insuficiência cardíaca</b>: Incapacidade do coração de bombear sangue adequadamente.</li>
+                <li><b>Arritmias</b>: Alterações no ritmo cardíaco.</li>
+                <li><b>Trombose</b>: Formação de coágulos que podem obstruir vasos.</li>
+            </ul>
+        </section>
+
+        <section class="F">
+            <h2>7. Curiosidades e Importância</h2>
+            <ul>
+                <li>O coração bate cerca de 100.000 vezes por dia, bombeando aproximadamente 7.500 litros de sangue.</li>
+                <li>A hemoglobina contém ferro, que se liga ao oxigênio, dando ao sangue sua cor vermelha.</li>
+                <li>O sistema circulatório interage com todos os outros sistemas do corpo, sendo essencial para a <b>homeostase</b>.</li>
+            </ul>
+            <p>Para ilustrar a circulação, imagine o coração como uma estação central de bombeamento, com as artérias como estradas principais que se ramificam em vias menores (arteríolas e capilares) para entregar suprimentos às células. As veias são as estradas de retorno, trazendo os resíduos de volta ao coração.</p>
+            <ul>
+                <li class="image-item">
+                    Visão geral do sistema circulatório
+                    <img src="../assets/circulatorio.jpg" alt="Visão geral do sistema circulatório">
+                </li>
+            </ul>
+        </section>
+
+        <div class="voltar-inicio">
+            <a href="../index.html">Voltar</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+  <title>Sinais Vitais no Atendimento Pré-Hospitalar</title>
+
+  <meta property="og:title" content="APH - Suporte Básico de Vida">
+    <meta property="og:description" content="Material de apoio para o curso de APH.">
+    <meta property="og:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    <meta property="og:url" content="https://cadudev99.github.io/Aula/">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APH - Suporte Básico de Vida">
+    <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
+    <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #cbd5e1;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-image: linear-gradient(to top, #1e2d42, #2b415f);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    h1 {
+      color: #00eeff;
+      text-shadow: 0px 0px 5px #00eeff;
+    }
+
+    h2 {
+      color: rgb(0, 255, 0);
+      text-shadow: 0px 0px 5px rgb(0, 255, 0); 
+    }
+
+    h3 {
+      color: yellow;
+      text-shadow: 0px 0px 5px yellow;
+      margin: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+    }
+
+    .exemplo {
+      background-color: #1e293b;
+      border-left: 4px solid #38bdf8;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    strong {
+      color: #7dd3fc;
+    }
+
+    .hr1 {
+      width: 100%;
+      border: 1px solid rgb(0, 247, 231);
+      box-shadow: 0px 0px 10px rgb(0, 247, 231);
+    }
+
+    .voltar-inicio {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-voltar {
+      background-color: #00fff7;
+      color: #15202F;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00fff7;
+      transition: all 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #00e0d1;
+      box-shadow: 0 0 15px #00fff7;
+      color: white;
+    }
+
+    footer {
+      background-image: linear-gradient(to top, #1e2d42, #2b415f); 
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #00e5ff;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sinais Vitais no Atendimento Pré-Hospitalar</h1>
+  </header>
+
+  <hr class="hr1">
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>1. O que são Sinais Vitais?</h2>
+        <p>Os <strong>sinais vitais</strong> são indicadores mensuráveis do estado fisiológico de uma pessoa, refletindo funções básicas do corpo, como circulação, respiração e regulação térmica. No <strong>Atendimento Pré-Hospitalar (APH)</strong>, a avaliação dos sinais vitais é essencial para determinar a gravidade de uma emergência, orientar intervenções e monitorar a condição da vítima.</p>
+        <h3>Principais Sinais Vitais</h3>
+        <ul>
+          <li><strong>Frequência Cardíaca (FC):</strong> Número de batimentos cardíacos por minuto.</li>
+          <li><strong>Frequência Respiratória (FR):</strong> Número de respirações por minuto.</li>
+          <li><strong>Pressão Arterial (PA):</strong> Força do sangue contra as paredes das artérias.</li>
+          <li><strong>Saturação de Oxigênio (SpO2):</strong> Percentual de oxigênio no sangue.</li>
+          <li><strong>Temperatura Corporal:</strong> Medida da regulação térmica do corpo.</li>
+        </ul>
+       
+      </section>
+
+      <section>
+        <h2>2. Importância dos Sinais Vitais no APH</h2>
+        <p>A medição dos sinais vitais no APH ajuda a:
+          <ul>
+            <li>Identificar emergências graves, como choque ou parada cardiorrespiratória.</li>
+            <li>Monitorar a resposta a intervenções, como administração de oxigênio.</li>
+            <li>Documentar a condição da vítima para o relatório ao hospital.</li>
+          </ul>
+        </p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em uma crise de asma, a SpO2 inicial de 88% melhora para 95% após oxigenoterapia, indicando eficácia do tratamento.
+        </div>
+        <div class="exemplo">
+          <strong>Curiosidade:</strong> A frequência cardíaca pode variar muito em situações de estresse. Atletas podem ter FC em repouso tão baixa quanto 40 bpm, enquanto o normal para adultos é 60-100 bpm.
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Protocolo de Avaliação de Sinais Vitais no APH</h2>
+        <p>A avaliação dos sinais vitais no APH segue uma abordagem sistemática, geralmente integrada ao protocolo <strong>ABCDE</strong> (Vias Aéreas, Respiração, Circulação, Deficiência Neurológica, Exposição). Abaixo está o passo-a-passo:</p>
+        <h3>3.1. Garantir a Segurança da Cena</h3>
+        <p>Certifique-se de que o ambiente é seguro antes de iniciar a avaliação.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em uma queda em uma construção, você sinaliza a área para evitar riscos antes de medir os sinais vitais.
+        </div>
+
+        <h3>3.2. Avaliação Primária (ABC)</h3>
+        <p>Antes de medir sinais vitais, confirme vias aéreas pérvias, respiração adequada e circulação estável.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em um afogamento, você verifica que a vítima respira, mas a SpO2 está em 90%, indicando necessidade de oxigênio.
+        </div>
+
+        <h3>3.3. Aferição dos Sinais Vitais</h3>
+        <ol>
+          <li><strong>Frequência Cardíaca (FC):</strong>
+            <ul>
+              <li><strong>Como aferir:</strong> Palpe o pulso radial ou Carotideo por 1 minuto e contabilize as pulsações ou utilize por exemplo um Oximetro</li>
+              <li><strong>Valores normais:</strong> Adultos: 60-100 bpm; Crianças: 70-120 bpm; Bebês: 100-160 bpm.</li>
+              <li><strong>Alterações:</strong> Taquicardia (>100 bpm) pode indicar choque; bradicardia (<60 bpm) pode sugerir hipóxia.</li>
+            </ul>
+          </li>
+          <div class="exemplo">
+            <strong>Exemplo:</strong> Em um evento esportivo, um corredor apresenta FC de 130 bpm após desmaiar, sugerindo síncope por desidratação.
+          </div>
+          <li><strong>Frequência Respiratória (FR):</strong>
+            <ul>
+              <li><strong>Como Aferir:</strong> Observe o movimento torácico por 1 minuto e contabilize as expansões torácicas.</li>
+              <li><strong>Valores normais:</strong> Adultos: 12-20 rpm; Crianças: 15-30 rpm; Bebês: 25-50 rpm.</li>
+              <li><strong>Alterações:</strong> Taquipneia (>20 rpm) pode indicar dor ou hipóxia; bradipneia (<12 rpm) pode sugerir depressão respiratória.</li>
+            </ul>
+          </li>
+          <div class="exemplo">
+            <strong>Exemplo:</strong> Em uma intoxicação, a vítima apresenta FR de 8 rpm, indicando necessidade de ventilação assistida.
+          </div>
+          <li><strong>Pressão Arterial (PA):</strong>
+            <ul>
+              <li><strong>Como Aferir:</strong> Use um esfigmomanômetro e estetoscópio ou monitor automático.</li>
+              <li><strong>Valores normais:</strong> Adultos: 90/60 a 120/80 mmHg; Crianças: varia por idade.</li>
+              <li><strong>Alterações:</strong> Hipotensão (<0/60 mmHg) pode indicar choque dependendo do contexto; hipertensão (>140/90 mmHg) pode sugerir crise hipertensiva.</li>
+            </ul>
+          </li>
+          <div class="exemplo">
+            <strong>Exemplo:</strong> Em um trauma, a PA de 80/50 mmHg sugere choque hipovolêmico, exigindo reposição de fluidos.
+          </div>
+          <li><strong>Saturação de Oxigênio (SpO2-Saturação Periferica por Oxigenio):</strong>
+            <ul>
+              <li><strong>Como aferir:</strong> Use um oxímetro de pulso no dedo.</li>
+              <li><strong>Valores normais:</strong> 95-100% em ar ambiente.</li>
+              <li><strong>Alterações:</strong> SpO2 <Menor que 90% indica necessidade de oxigenoterapia.</li>
+            </ul>
+          </li>
+          <div class="exemplo">
+            <strong>Exemplo:</strong> Em uma crise asmática, SpO2 de 89% leva à administração de oxigênio a 5 L/min.
+          </div>
+          <li><strong>Temperatura Corporal:</strong>
+            <ul>
+              <li><strong>Como aferir:</strong> Use termômetro axilar ou oral.</li>
+              <li><strong>Valores normais:</strong> 36-37,5°C.</li>
+              <li><strong>Alterações:</strong> Febre (>38°C) pode indicar infecção; hipotermia (<35°C) pode ocorrer em exposição ao frio.</li>
+            </ul>
+          </li>
+          <div class="exemplo">
+            <strong>Exemplo:</strong> Em uma criança com convulsão febril, a temperatura de 39°C sugere necessidade de antipiréticos.
+          </div>
+        </ol>
+
+        <h3>3.4. Reavaliação Contínua</h3>
+        <p>Monitore os sinais vitais a cada 5-10 minutos em casos graves ou após intervenções.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Após administrar fluidos em um paciente com choque, a PA sobe de 80/50 para 100/70 mmHg, indicando melhora.
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Avaliação em Diferentes Cenários</h2>
+        <p>A abordagem dos sinais vitais varia conforme o ambiente e a situação no APH.</p>
+        <h3>4.1. Ambiente Urbano (Rua, Shopping, Trabalho)</h3>
+        <p><strong>Desafios:</strong> Barulho, multidão, acesso limitado a equipamentos.</p>
+        <p><strong>Estratégias:</strong> Use equipamentos portáteis (oxímetro, esfigmomanômetro) e peça ajuda para organizar a cena.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em um shopping, uma vítima de síncope tem PA de 90/60 mmHg, sugerindo desidratação. Você eleva as pernas e monitora.
+        </div>
+
+        <h3>4.2. Ambiente Aquático (Praia, Piscina)</h3>
+        <p><strong>Desafios:</strong> Calor e umidade podem afetar equipamentos; risco de hipotermia.</p>
+        <p><strong>Estratégias:</strong> Proteja o oxímetro da água e aqueça a vítima, se necessário.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Após um afogamento, a vítima tem SpO2 de 89% e temperatura de 35°C, indicando oxigenoterapia e aquecimento.
+        </div>
+
+        <h3>4.3. Ambiente Rural ou Remoto</h3>
+        <p><strong>Desafios:</strong> Falta de equipamentos avançados e demora no transporte.</p>
+        <p><strong>Estratégias:</strong> Confie em técnicas manuais (palpação de pulso, contagem respiratória) e priorize estabilização.</p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em uma fazenda, sem oxímetro, você conta a FR de 24 rpm em uma vítima de trauma, sugerindo taquipneia por dor.
+        </div>
+
+        <h3>4.4. Crianças e Idosos</h3>
+        <p><strong>Particularidades:</strong>
+          <ul>
+            <li><strong>Crianças:</strong> FC e FR são naturalmente mais altas; use manguitos pediátricos para PA.</li>
+            <li><strong>Idosos:</strong> Alterações podem ser sutis devido a medicamentos ou comorbidades.</li>
+          </ul>
+        </p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Em uma criança com febre, a FC de 140 bpm é normal para a idade, mas a temperatura de 39,5°C exige intervenção.
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Curiosidades sobre Sinais Vitais</h2>
+        <div class="exemplo">
+          <strong>Curiosidade:</strong> O oxímetro de pulso foi inventado na década de 1970, mas só se popularizou no APH nos anos 2000, revolucionando o monitoramento de SpO2.
+        </div>
+        <div class="exemplo">
+          <strong>Curiosidade:</strong> A pressão arterial pode ser estimada sem equipamentos: pulso radial presente sugere PA >80 mmHg; pulso carotídeo presente sugere PA >60 mmHg.
+        </div>
+        <div class="exemplo">
+          <strong>Curiosidade:</strong> Em situações de estresse, como acidentes, a FC pode subir temporariamente mesmo sem lesões graves, devido à liberação de adrenalina.
+        </div>
+      </section>
+
+      <section>
+        <h2>6. Erros Comuns a Evitar</h2>
+        <ul>
+          <li>Não confiar apenas em equipamentos; confirme com avaliação manual (ex.: pulso).</li>
+          <li>Evitar medir PA em membros lesionados ou com manguitos inadequados.</li>
+          <li>Não ignorar alterações sutis, especialmente em idosos ou crianças.</li>
+        </ul>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Um erro comum é ignorar uma SpO2 de 93% em um idoso, que pode indicar hipóxia silenciosa.
+        </div>
+      </section>
+
+      <section>
+        <h2>7. Relato para o Hospital</h2>
+        <p>Inclua no relatório:
+          <ul>
+            <li>Valores iniciais e reavaliações dos sinais vitais.</li>
+            <li>Intervenções realizadas (ex.: oxigenoterapia, fluidos).</li>
+            <li>Histórico médico e eventos que precederam (S.A.M.P.L.E.).</li>
+          </ul>
+        </p>
+        <div class="exemplo">
+          <strong>Exemplo:</strong> Relato: “Vítima feminina, 30 anos, trauma torácico, FC inicial 120 bpm, PA 100/60 mmHg, SpO2 90%, oxigênio a 4 L/min aplicado.”
+        </div>
+      </section>
+
+      <section>
+        <h2>8. Considerações Finais</h2>
+        <p>A avaliação precisa dos sinais vitais no APH é fundamental para salvar vidas. Ela orienta decisões críticas, desde a administração de oxigênio até o transporte prioritário. Treinamento contínuo e atenção aos detalhes garantem um atendimento eficaz e seguro.</p>
+      </section>
+    </div>
+
+    <div class="voltar-inicio">
+      <a href="../index.html" class="btn-voltar">Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Material didático - Curso de APH | Desenvolvido por Cadu</p>
+  </footer>
+</body>
+</html>

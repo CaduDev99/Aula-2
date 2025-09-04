@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
+  <title>AVE/AIT no SBV</title>
+
+  <meta property="og:title" content="APH - Suporte Básico de Vida">
+    <meta property="og:description" content="Material de apoio para o curso de APH.">
+    <meta property="og:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    <meta property="og:url" content="https://cadudev99.github.io/Aula/">
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APH - Suporte Básico de Vida">
+    <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
+    <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
+    
+  <style>
+    @charset "UTF-8";
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px;
+      background-color: #15202F;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #15202F;
+      color: aliceblue;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    main {
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 25px rgb(0, 174, 255);
+      width: 100%;
+      max-width: 750px;
+      margin: 20px auto;
+      text-align: justify;
+      padding: 20px;
+      border-radius: 20px;
+      
+    }
+
+    h1 {
+      color: rgb(246, 255, 0);
+      text-shadow: 0 0 10px rgb(246, 255, 0);
+    }
+
+    h2 {
+      margin: 20px 0;
+      color: #00ff2f;
+      text-shadow: 0 0 5px #00ff2f;
+      font-size: 24px;
+    }
+
+    h3 {
+      color: #ff8400;
+      text-shadow: 0 0 5px #ff8400;
+      font-size: 20px;
+      margin-top: 1rem;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-indent: 30px;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    ol, ul {
+      list-style: none;
+      padding-left: 1.2rem;
+    }
+
+    b {
+      color: rgb(255, 0, 0);
+      text-shadow: 0 0 15px rgb(255, 0, 0);
+    }
+
+    span, .highlight {
+      color: rgb(255, 255, 0);
+      text-shadow: 0 0 15px rgb(255, 255, 0);
+      font-weight: bold;
+    }
+
+    hr {
+      background-color: #15202F;
+      border: 1px solid rgb(0, 255, 255);
+      box-shadow: 0 0 15px rgb(0, 251, 255);
+      margin: 5px 0;
+    }
+
+    .hr1 {
+      border: 1px solid orange;
+      box-shadow: 0 0 15px orange;
+      margin: 5px 0;
+    }
+
+    .btn-div {
+      text-align: center;
+      font-size: 30px;
+      width: 150px;
+      background-color: red;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px;
+      box-shadow: 0 0 15px red;
+      margin: 20px auto;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .btn-div:hover {
+      background-color: blue;
+      box-shadow: 0 0 15px blue;
+      transition-duration: 0.3s;
+    }
+
+    .voltar-inicio {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-voltar {
+      background-color: #00fff7;
+      color: #15202F;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00fff7;
+      transition: all 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #00e0d1;
+      box-shadow: 0 0 15px #00fff7;
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #ff0000;
+      color: white;
+    }
+    .warning {
+      color: #d32f2f;
+      text-shadow: 0 0 15px #d32f2f;
+      font-weight: bold;
+    }
+
+    footer{
+        text-align: center;
+        color: rgba(255, 255, 255, 0.719);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AVE e AIT no SBV</h1>
+  </header>
+  <hr>
+  <main>
+    <div class="section">
+      <h2>1. Entendendo o AVE e sua urgência</h2>
+      <p>O AVE (Acidente Vascular Encefalico) é uma interrupção súbita do fluxo sanguíneo para o cérebro, podendo ser isquêmico (~87% dos casos) ou hemorrágico (~13%), O Ataque Isquêmico Transitório (AIT) é uma interrupção temporária sem dano cerebral permanente. No SBV, ambos são tratados como emergências devido ao risco de sequelas (AVC) ou AVC futuro (AIT), a prioridade é reconhecer os sinais rapidamente, estabilizar o paciente e garantir transporte imediato a um hospital com capacidade de tratamento.</p>
+      <p><span>Por que o tempo é crítico?</span></p>
+      <ul>
+        <li>O cérebro perde cerca de 1,9 milhão de neurônios por minuto sem tratamento.</li>
+        <li>Janela terapêutica: até 4,5h para trombólise e até 24h para trombectomia.</li>
+        <li>No SBV, aja como se fosse AVE tratável até que se prove o contrário.</li>
+      </ul>
+    </div>
+
+    <section class="tipos-avc">
+    <h2>Tipos de AVC (Acidente Vascular Cerebral)</h2>
+
+    <article class="avc-isquemico">
+        <h3>1. AVC Isquêmico (mais comum – cerca de 85% dos casos)</h3>
+        <p><strong>O que é:</strong> ocorre quando há obstrução de uma artéria que leva sangue ao cérebro. Isso impede o oxigênio e os nutrientes de chegarem a uma parte do cérebro, causando a morte das células cerebrais.</p>
+        <p><strong>Causas:</strong> trombo (coágulo local), êmbolo (coágulo que viaja), aterosclerose (placas de gordura).</p>
+        <p><strong>Sinais comuns:</strong> fraqueza em um lado do corpo, dificuldade para falar ou entender, visão turva, tontura e desequilíbrio.</p>
+    </article>
+
+    <article class="avc-hemorragico">
+        <h3>2. AVC Hemorrágico (mais grave – cerca de 15%)</h3>
+        <p><strong>O que é:</strong> ocorre quando há ruptura de um vaso sanguíneo no cérebro, causando sangramento intracraniano.</p>
+        <p><strong>Causas:</strong> hipertensão não controlada, aneurismas, traumas, uso de drogas.</p>
+        <p><strong>Sinais comuns:</strong> dor de cabeça súbita e intensa, náuseas, perda de consciência, convulsões, sintomas semelhantes ao AVC isquêmico.</p>
+    </article>
+
+    <article class="ait">
+        <h3>3. AIT (Ataque Isquêmico Transitório)</h3>
+        <p><strong>O que é:</strong> uma interrupção temporária do fluxo sanguíneo cerebral. Os sintomas duram menos de 24h e desaparecem completamente.</p>
+        <p><strong>Importância:</strong> sinal de alerta para um possível AVC mais grave em até 48h.</p>
+        <p><strong>Sintomas:</strong> semelhantes ao AVC isquêmico, mas reversíveis.</p>
+    </article>
+
+    <article class="diagnostico-tratamento">
+        <h3>Diagnóstico e Tratamento</h3>
+        <ul>
+            <li><strong>Diagnóstico:</strong> Tomografia ou ressonância do crânio</li>
+            <li><strong>Isquêmico:</strong> trombólise (até 4h30 após o início dos sintomas)</li>
+            <li><strong>Hemorrágico:</strong> controle da pressão e, em alguns casos, cirurgia</li>
+        </ul>
+    </article>
+</section>
+
+    <div class="section">
+      <h2>2. Reconhecimento dos sinais de AVE</h2>
+      <h3>Escala FAST (Rapido em inglês)</h3>
+      <ul>
+        <li><b>Face (Face)</b>: Assimetria facial ao sorrir.</li>
+        <li><b>Arm (Braço)</b>: Fraqueza em um dos braços ao levantar.</li>
+        <li><b>Speech(Fala)</b>: Dificuldade ou fala arrastada.</li>
+        <li><b>Time(tempo)</b>: Pergunte quando foi visto normal pela última vez.</li>
+      </ul>
+      <p>Outros sinais: perda de visão súbita, dor de cabeça intensa, tontura, confusão mental.</p>
+    </div>
+    
+    <div class="section">
+      <h2>5. Intervenções no SBV</h2>
+      <ul>
+        <li>Posicionamento adequado conforme nível de consciência.</li>
+        <li>Oxigenoterapia conforme SpO2.</li>
+        <li>Monitoramento contínuo dos sinais vitais.</li>
+        <li>Controle de convulsões (se habilitado).</li>
+        <li><b>Evite:</b> Aspirina, alimentação oral, redução de PA.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>6. Transporte</h2>
+      <p>Transporte para centro com suporte a AVE. Comunique o hospital com antecedência.</p>
+      <p><span>Informações importantes:</span> início dos sintomas, sinais vitais, uso de medicamentos, glicemia.</p>
+    </div>
+    <div class="section">
+      <h2>7. Documentação</h2>
+      <ul>
+        <li>Horário de início dos sintomas.</li>
+        <li>Escala FAST e ECG (Escala de Coma de Glasgow).</li>
+        <li>Sinais vitais e glicemia.</li>
+        <li>Intervenções realizadas.</li>
+        <li>Horários de atendimento e chegada ao hospital.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>8. Considerações especiais</h2>
+      <p>AVC pode ocorrer em jovens. AVE "wake-up" precisa de avaliação cuidadosa. Comunique-se com empatia com familiares.</p>
+    </div>
+    <div class="section">
+      <h2>9. Exemplo prático</h2>
+      <p>Paciente de 70 anos com início de sintomas às 10h45. Às 11h, equipe encontra paciente com fala arrastada, fraqueza em braço direito e assimetria facial. ECG 14, SpO2 95%, PA 180/100.</p>
+    </div>
+
+    <div>
+        <h2>7. Diferença entre AVC e AIT</h2>
+    <table>
+      <tr>
+        <th>Característica</th>
+        <th>AVC</th>
+        <th>AIT</th>
+      </tr>
+      <tr>
+        <td>Duração</td>
+        <td>>24 horas ou sequelas</td>
+        <td><1 hora (máx. 24 horas), resolve completamente</td>
+      </tr>
+      <tr>
+        <td>Causa</td>
+        <td>Obstrução/hemorragia com dano cerebral</td>
+        <td>Obstrução temporária, sem dano</td>
+      </tr>
+      <tr>
+        <td>Sintomas</td>
+        <td>Súbitos, focais (fraqueza, fala arrastada)</td>
+        <td>Idênticos, mas transitórios</td>
+      </tr>
+      <tr>
+        <td>Conduta no SBV</td>
+        <td>Emergência máxima</td>
+        <td>Tratar como AVC até que se prove o contrário</td>
+      </tr>
+    </table>
+    <p><span class="warning">No SBV, não diferencie AVC de AIT</span>: Trate ambos como emergência e transporte imediatamente.</p>
+
+    </div>
+
+    <div class="voltar-inicio">
+      <a href="../index.html" class="btn-voltar">Voltar</a>
+    </div>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>Conteudo criado com base no AHA(2021)</p>
+  </footer>
+</body>
+</html>
