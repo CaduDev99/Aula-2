@@ -18,118 +18,140 @@
     <meta name="twitter:description" content="Material de apoio interativo para o curso de APH.">
     <meta name="twitter:image" content="https://cadudev99.github.io/Aula/assets/estrela.png">
     
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #cbd5e1;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    header {
-      width: 100%;
-      background-image: linear-gradient(to top, #1e2d42, #2b415f);
-      padding: 1rem;
-      text-align: center;
-    }
+/* Cabeçalho */
+header {
+  width: 100%;
+  background: linear-gradient(to right, #7b0f0f, #a30000, #c91818);
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
 
-    .container {
-      max-width: 800px;
-      width: 100%;
-      padding: 2rem;
-    }
+h1 {
+  font-size: 1.8rem;
+}
 
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
+/* Container */
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+}
 
-    h1 {
-      color: #00eeff;
-      text-shadow: 0px 0px 5px #00eeff;
-    }
+/* Títulos */
+h2 {
+  color: #ea0000;
+  margin-bottom: 0.8rem;
+}
 
-    h2 {
-      color: rgb(0, 255, 0);
-      text-shadow: 0px 0px 5px rgb(0, 255, 0); 
-    }
+h3 {
+  color: #444;
+  margin: 0.5rem 0;
+}
 
-    h3 {
-      color: yellow;
-      text-shadow: 0px 0px 5px yellow;
-      margin: 0.5rem;
-    }
+/* Texto */
+p, li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
 
-    section {
-      margin-bottom: 2rem;
-    }
+/* Listas */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-    ul, ol {
-      margin-left: 2rem;
-    }
+/* Destaques */
+strong {
+  color: #a30000;
+  font-weight: bold;
+}
 
-    .exemplo {
-      background-color: #1e293b;
-      border-left: 4px solid #38bdf8;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
+/* Box de exemplo */
+.exemplo {
+  background: #f9f9f9;
+  border-left: 4px solid #a30000;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
-    strong {
-      color: #7dd3fc;
-    }
+/* Linha divisória */
+.hr1 {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #a30000;
+  margin: 1rem 0;
+}
 
-    .hr1 {
-      width: 100%;
-      border: 1px solid rgb(0, 247, 231);
-      box-shadow: 0px 0px 10px rgb(0, 247, 231);
-    }
+/* Botão voltar */
+.voltar-inicio {
+  text-align: center;
+  margin: 2rem 0;
+}
 
-    .voltar-inicio {
-      text-align: center;
-      margin-top: 2rem;
-    }
+.btn-voltar {
+  background: #dd0000;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
 
-    .btn-voltar {
-      background-color: #00fff7;
-      color: #15202F;
-      padding: 0.7rem 2rem;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px #00fff7;
-      transition: all 0.3s ease;
-    }
+.btn-voltar:hover {
+  background: #9e0202;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
-    .btn-voltar:hover {
-      background-color: #00e0d1;
-      box-shadow: 0 0 15px #00fff7;
-      color: white;
-    }
+/* Rodapé */
+footer {
+  width: 100%;
+  background: linear-gradient(to right, #7b0f0f, #a30000);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
 
-    footer {
-      background-image: linear-gradient(to top, #1e2d42, #2b415f); 
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      border-top: 1px solid #00e5ff;
-      width: 100%;
-    }
-  </style>
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+</style>
 </head>
 <body>
   <header>
