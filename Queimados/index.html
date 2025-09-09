@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/Red Star.jpg" type="image/x-icon">
+    <title>Grandes Queimados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF; /* Branco */
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #D32F2F; /* Vermelho */
+            color: #FFFFFF;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: #1976D2; /* Azul */
+            padding: 0,5rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #D32F2F; /* Vermelho no hover */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #F5F5F5; /* Branco acinzentado */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #D32F2F; /* Vermelho */
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        section h3 {
+            color: #1976D2; /* Azul */
+            font-size: 1.4rem;
+            margin: 1rem 0;
+        }
+
+        p, ul, li {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table th, table td {
+            border: 1px solid #1976D2; /* Azul */
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #D32F2F; /* Vermelho */
+            color: #FFFFFF;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #E3F2FD; /* Azul claro */
+        }
+
+        a {
+            color: #1976D2; /* Azul */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #1976D2; /* Azul */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btndiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .back-button {
+            background-color: #1976D2;
+            color: white; 
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #D32F2F; 
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grandes Queimados: Guia Completo</h1>
+        <p>Entenda as queimaduras graves e o atendimento no contexto de APH</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#definicao">Definição</a></li>
+            <li><a href="#classificacao">Classificação</a></li>
+            <li><a href="#causas">Causas</a></li>
+            <li><a href="#aph">Atendimento Pré-Hospitalar</a></li>
+            <li><a href="#tratamento">Tratamento</a></li>
+            <li><a href="#complicacoes">Complicações</a></li>
+            <li><a href="#reabilitacao">Reabilitação</a></li>
+            <li><a href="#prevencao">Prevenção</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="definicao">
+            <h2>Definição e Epidemiologia</h2>
+            <p>Grandes queimados referem-se a pacientes com queimaduras extensas (>20% da superfície corporal em adultos) ou profundas (terceiro grau), frequentemente exigindo cuidados em centros especializados. No Brasil, acidentes domésticos, como escaldaduras, são predominantes, afetando especialmente crianças e idosos.</p>
+            <p>Globalmente, queimaduras são a quarta maior causa de morte por trauma, com maior incidência em países em desenvolvimento. Fatores de risco incluem acidentes domésticos, violência e exposição a substâncias inflamáveis.</p>
+        </section>
+
+        <section id="causas">
+            <h2>Causas e Mecanismos</h2>
+            <ul>
+                <li><strong>Térmicas:</strong> Fogo, líquidos quentes ou superfícies escaldantes. Podem incluir inalação de fumaça.</li>
+                <li><strong>Químicas:</strong> Ácidos, bases ou compostos orgânicos, como soda cáustica, causam danos profundos.</li>
+                <li><strong>Elétricas:</strong> Corrente elétrica causa lesões internas graves, com risco de arritmias.</li>
+                <li><strong>Radiação:</strong> Inclui queimaduras solares (UV) ou ionizantes, comuns em contextos industriais.</li>
+            </ul>
+        </section>
+
+        <section id="classificacao">
+            <h2>Classificação das Queimaduras</h2>
+            <h3>Por Profundidade</h3>
+            <ul>
+                <li><strong>Primeiro Grau:</strong> Afeta a epiderme, com vermelhidão e dor. Cura em 4-7 dias.</li>
+                <li><strong>Segundo Grau:</strong> Atinge a derme, formando bolhas. Superficial (dolorosa, úmida) ou profunda (menos dolorosa, seca).</li>
+                <li><strong>Terceiro Grau:</strong> Destrói toda a pele, indolor, requer enxertos.</li>
+            </ul>
+            <h3>Por Extensão</h3>
+            <p>A "Regra dos Nove" estima a superfície corporal queimada (SCQ):</p>
+            <ul>
+                <li>Cabeça/pescoço: 9%</li>
+                <li>Cada braço: 9%</li>
+                <li>Tronco anterior/posterior: 18% cada</li>
+                <li>Cada perna: 18%</li>
+                <li>Genitais: 1%</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Classificação</th>
+                    <th>Profundidade</th>
+                    <th>Sinais Clínicos</th>
+                    <th>Tempo de Cura</th>
+                    <th>Tratamento</th>
+                </tr>
+                <tr>
+                    <td>Primeiro Grau</td>
+                    <td>Epiderme</td>
+                    <td>Vermelhidão, dor, edema</td>
+                    <td>4-7 dias</td>
+                    <td>Resfriamento, hidratação tópica</td>
+                </tr>
+                <tr>
+                    <td>Segundo Grau Superficial</td>
+                    <td>Epiderme + Derme parcial</td>
+                    <td>Bolhas, base úmida, dor</td>
+                    <td>7-21 dias</td>
+                    <td>Curativos, analgésicos</td>
+                </tr>
+                <tr>
+                    <td>Segundo Grau Profundo</td>
+                    <td>Epiderme + Derme total</td>
+                    <td>Base seca, branca</td>
+                    <td>>21 dias</td>
+                    <td>Enxerto, antibióticos</td>
+                </tr>
+                <tr>
+                    <td>Terceiro Grau</td>
+                    <td>Toda pele + subcutâneo</td>
+                    <td>Carbonizada, indolor</td>
+                    <td>Não cura sozinha</td>
+                    <td>Enxerto cirúrgico</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="aph">
+            <h2>Atendimento Pré-Hospitalar (APH)</h2>
+            <p>O APH segue o protocolo ABCDE (vias aéreas, respiração, circulação, deficiências neurológicas, exposição):</p>
+            <ul>
+                <li><strong>Segurança:</strong> Extinga chamas, remova da fonte (químicas: irrigar 30min+; elétricas: desligar fonte).</li>
+                <li><strong>Resfriamento:</strong> Água corrente (10-20min, <10% SCQ). Evite gelo.</li>
+                <li><strong>ABCDE:</strong> Administre O2 se inalação, inicie IV (Fórmula Parkland: 2-4mL x %SCQ x peso, metade em 8h), cubra com lençol estéril.</li>
+                <li><strong>Transferência:</strong> Centro de queimados se <15min; estabilize localmente otherwise.</li>
+            </ul>
+            <p>Consulte o <a href="https://bvsms.saude.gov.br/bvs/publicacoes/cartilha_tratamento_emergencia_queimaduras.pdf">Ministério da Saúde</a> para mais detalhes.</p>
+        </section>
+
+        <section id="tratamento">
+            <h2>Tratamento Hospitalar</h2>
+            <ul>
+                <li><strong>Inicial:</strong> Hidratação IV, analgésicos (morfina), antibióticos.</li>
+                <li><strong>Feridas:</strong> Desbridamento, sulfadiazina de prata, escharotomia se necessário.</li>
+                <li><strong>Cirurgia:</strong> Enxertos autólogos ou temporários.</li>
+                <li><strong>Nutrição:</strong> Suporte enteral para metabolismo elevado.</li>
+            </ul>
+        </section>
+
+        <section id="complicacoes">
+            <h2>Complicações</h2>
+            <ul>
+                <li><strong>Imediatas:</strong> Choque hipovolêmico, infecções, insuficiência renal (eléctricas).</li>
+                <li><strong>Tardias:</strong> Cicatrizes queloides, contraturas, amputações, transtornos psicológicos (PTSD).</li>
+            </ul>
+        </section>
+
+        <section id="reabilitacao">
+            <h2>Reabilitação e Suporte Psicológico</h2>
+            <p>Fisioterapia previne contraturas; terapia ocupacional restaura funcionalidade. Suporte psicológico é essencial para lidar com traumas. Use protetor solar em áreas cicatrizadas.</p>
+        </section>
+
+        <section id="prevencao">
+            <h2>Prevenção</h2>
+            <p>Educação sobre detectores de fumaça, cuidado com líquidos quentes e proteção em ambientes de risco é crucial. Campanhas governamentais visam reduzir incidências em crianças e idosos.</p>
+        </section>
+    </div>
+
+    <div class="btndiv"><button class="back-button" onclick="window.location.href='../index.html'">Voltar à Página Anterior</button></div>
+
+    <footer>
+        <p>&copy; 2025 - Guia de Grandes Queimados. Todos os direitos reservados.</p>
+        <p>Referências: <a href="https://www.saudedireta.com.br/docsupload/1340458333cap_21_queimaduras.pdf" style="color: #FFFFFF;">SIATE/CBPR</a>, <a href="https://bvsms.saude.gov.br/bvs/publicacoes/cartilha_tratamento_emergencia_queimaduras.pdf" style="color: #FFFFFF;">Ministério da Saúde</a>, <a href="https://www.mayoclinic.org/diseases-conditions/burns/diagnosis-treatment/drc-20370545" style="color: #FFFFFF;">Mayo Clinic</a></p>
+    </footer>
+</body>
+</html>
