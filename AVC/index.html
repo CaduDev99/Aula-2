@@ -21,149 +21,90 @@
   <style>
     @charset "UTF-8";
 
-    * {
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    header {
+    body{
+      min-height: 100vh;
+      background-color: #FFFFFF;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #000;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    header{
+      background-image: linear-gradient(to top, #A4161A, #820b0f);
+      width: 100%;
+      height: 70px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 0px;
-      background-color: #15202F;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: #15202F;
-      color: aliceblue;
-      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      line-height: 1.6;
-      font-size: 18px;
-      padding: 20px;
-    }
-
-    main {
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 25px rgb(0, 174, 255);
-      width: 100%;
-      max-width: 750px;
-      margin: 20px auto;
-      text-align: justify;
-      padding: 20px;
-      border-radius: 20px;
-      
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
     h1 {
-      color: rgb(246, 255, 0);
-      text-shadow: 0 0 10px rgb(246, 255, 0);
+      font-size: 26px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+      text-align: justify;
     }
 
     h2 {
       margin: 20px 0;
-      color: #00ff2f;
-      text-shadow: 0 0 5px #00ff2f;
-      font-size: 24px;
+      color: #A4161A;
+      font-size: 22px;
+      text-shadow: 0 0 5px rgba(164,22,26,0.4);
     }
 
     h3 {
-      color: #ff8400;
-      text-shadow: 0 0 5px #ff8400;
-      font-size: 20px;
       margin-top: 1rem;
+      color: #820b0f;
+      font-size: 18px;
     }
 
     p {
       margin-bottom: 15px;
-      text-indent: 30px;
+      text-indent: 20px;
     }
 
     li {
-      margin: 15px 0;
+      margin: 10px 0;
     }
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    ol, ul {
-      list-style: none;
-      padding-left: 1.2rem;
+    ul, ol {
+      padding-left: 20px;
     }
 
     b {
-      color: rgb(255, 0, 0);
-      text-shadow: 0 0 15px rgb(255, 0, 0);
+      color: #D62828;
     }
 
     span, .highlight {
-      color: rgb(255, 255, 0);
-      text-shadow: 0 0 15px rgb(255, 255, 0);
+      color: #A4161A;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #D62828;
       font-weight: bold;
     }
 
     hr {
-      background-color: #15202F;
-      border: 1px solid rgb(0, 255, 255);
-      box-shadow: 0 0 15px rgb(0, 251, 255);
-      margin: 5px 0;
-    }
-
-    .hr1 {
-      border: 1px solid orange;
-      box-shadow: 0 0 15px orange;
-      margin: 5px 0;
-    }
-
-    .btn-div {
-      text-align: center;
-      font-size: 30px;
-      width: 150px;
-      background-color: red;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 20px;
-      box-shadow: 0 0 15px red;
-      margin: 20px auto;
-      transition: all ease-in-out 0.3s;
-    }
-
-    .btn-div:hover {
-      background-color: blue;
-      box-shadow: 0 0 15px blue;
-      transition-duration: 0.3s;
-    }
-
-    .voltar-inicio {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .btn-voltar {
-      background-color: #00fff7;
-      color: #15202F;
-      padding: 0.7rem 2rem;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      box-shadow: 0 0 10px #00fff7;
-      transition: all 0.3s ease;
-    }
-
-    .btn-voltar:hover {
-      background-color: #00e0d1;
-      box-shadow: 0 0 15px #00fff7;
-      color: white;
+      border: 1px solid #c81a1f;
+      box-shadow: 0px 0px 10px #A4161A;
+      margin: 30px 0;
     }
 
     table {
@@ -171,24 +112,80 @@
       border-collapse: collapse;
       margin: 20px 0;
     }
+
     th, td {
       border: 1px solid #ddd;
-      padding: 8px;
+      padding: 10px;
       text-align: left;
     }
+
     th {
-      background-color: #ff0000;
+      background-color: #A4161A;
       color: white;
     }
-    .warning {
-      color: #d32f2f;
-      text-shadow: 0 0 15px #d32f2f;
-      font-weight: bold;
+
+    /* Botão voltar */
+    .voltar-inicio {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
+    .btn-voltar {
+      background-color: #D62828;
+      color: white;
+      padding: 12px 30px;
+      border: 1px solid #ef1c1c;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      transition: all ease-in-out 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background-color: #b00b0b;
+      border: 1px solid #ff0707;
+      color: #fff;
+    }
+
+
+
     footer{
+      text-align: center;
+      padding: 15px;
+      background-color: #d20000;
+      color: #ffffff;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+      header {
+        height: auto;
+        padding: 15px;
         text-align: center;
-        color: rgba(255, 255, 255, 0.719);
+      }
+      main {
+        margin: 20px;
+        padding: 20px;
+      }
+      .btn-voltar {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      h2 { font-size: 20px; }
+      .btn-voltar {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -326,8 +323,6 @@
       <a href="../index.html" class="btn-voltar">Voltar</a>
     </div>
   </main>
-
-  <hr>
 
   <footer>
     <p>Conteudo criado com base no AHA(2021)</p>
