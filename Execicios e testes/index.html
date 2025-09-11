@@ -15,38 +15,36 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #15202F;
-            color: #e0f7fa;
+            background-color: #ffffff;
+            color: #000000;
             line-height: 1.6;
         }
 
         header {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f);
+            background-image: linear-gradient(to top, #e10000, #a40000);
             padding: 2rem 0;
             text-align: center;
             color: #ffffff;
         }
 
         .ovace {
-            color: rgb(0, 255, 0);
-            text-shadow: 0px 0px 5px rgb(0, 255, 0);
+            color: rgb(255, 0, 0);
         }
 
         main {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f);
+            background-image: linear-gradient(to top, #f9f9f9, #e2e2e2);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.473);
             max-width: 800px;
             margin: auto;
             padding: 2rem 1rem;
         }
 
         h1, h2, h4 {
-            color: #00fff7;
-            text-shadow: 0px 0px 5px #00fff7;
+            color: #ffffff;
         }
 
         h3 {
-            color: yellow;
-            text-shadow: 0px 0px 5px yellow;
+            color: rgb(0, 0, 0);
             margin: 0.5rem;
         }
 
@@ -73,11 +71,11 @@
 
         section.intro p {
             font-size: 1.1rem;
-            color: #b2ebf2;
+            color: #000000;
         }
 
         footer {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f); 
+            background-image: linear-gradient(to top, #d60000, #b30101); 
             color: #ffffff;
             text-align: center;
             padding: 1rem;
@@ -87,14 +85,14 @@
         }
 
         .hr1 {
-            border: 1px solid rgb(0, 255, 238);
-            box-shadow: 0px 0px 10px rgb(0, 247, 231);
+            border: 1px solid rgb(255, 0, 0);
+            box-shadow: 0px 0px 10px rgb(247, 0, 0);
             margin: 15px 0;
         }
 
         .hr2 {
-            border: 1px solid rgb(0, 247, 231);
-            box-shadow: 0px 0px 10px rgb(0, 247, 231);
+            border: 1px solid rgb(247, 0, 0);
+            box-shadow: 0px 0px 10px rgb(247, 0, 0);
         }
 
         .imagem-heimlich {
@@ -107,9 +105,9 @@
             width: 100%;
             max-width: 600px;
             height: auto;
-            border: 2px solid #00fff7;
+            border: 2px solid #ff0000;
             border-radius: 10px;
-            box-shadow: 0 0 10px #00fff7;
+            box-shadow: 0 0 10px #ff0000;
         }
 
         .voltar-inicio {
@@ -121,21 +119,19 @@
         }
 
         .btn-voltar, .btn-restart, .btn-start {
-            background-color: #00fff7;
-            color: #15202F;
+            background-color: #ff0000;
+            color: #ffffff;
             padding: 0.7rem 2rem;
             border: none;
             border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 0 10px #00fff7;
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .btn-voltar:hover, .btn-restart:hover, .btn-start:hover {
-            background-color: #00e0d1;
-            box-shadow: 0 0 15px #00fff7;
+            background-color: #e00000;
             color: white;
         }
 
@@ -154,7 +150,8 @@
         }
 
         .option {
-            background-color: #2b415f;
+            background-color: #9d0000;
+            color: white;
             padding: 0.8rem;
             border-radius: 5px;
             cursor: pointer;
@@ -162,23 +159,22 @@
         }
 
         .option:hover {
-            background-color: #3a5675;
+            background-color: #e20000;
         }
 
         .option.selected {
-            background-color: #00fff7;
-            color: #15202F;
+            background-color: #ff0000;
+            color: #ffffff;
         }
 
         .btn-next, .btn-submit {
-            background-color: #00fff7;
-            color: #15202F;
+            background-color: #ff0000;
+            color: #ffffff;
             padding: 0.7rem 2rem;
             border: none;
             border-radius: 10px;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 0 10px #00fff7;
             transition: all 0.3s ease;
             margin-top: 1rem;
             display: block;
@@ -187,19 +183,24 @@
         }
 
         .btn-next:hover, .btn-submit:hover {
-            background-color: #00e0d1;
-            box-shadow: 0 0 15px #00fff7;
+            background-color: #e00000;
             color: white;
         }
 
         #result {
             display: none;
             text-align: center;
+            color: rgb(220, 0, 0);
         }
 
         #start-screen {
             text-align: center;
         }
+
+        .resultado-titulo {
+            color: #ff0000; /* vermelho */
+        }
+
     </style>
 </head>
 <body>
@@ -617,7 +618,7 @@
                 score = userAnswers.reduce((acc, answer, index) => {
                     return answer === selectedQuestions[index].correct ? acc + 1 : acc;
                 }, 0);
-                resultElement.innerHTML = `<h2>Resultado</h2><p>Você acertou ${score} de ${selectedQuestions.length} questões!</p>`;
+                resultElement.innerHTML = `<h2 class="resultado-titulo">Resultado</h2><p>Você acertou ${score} de ${selectedQuestions.length} questões!</p>`;
                 resultElement.style.display = 'block';
                 quizContainer.style.display = 'none';
                 next.style.display = 'none';
