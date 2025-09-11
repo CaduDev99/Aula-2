@@ -4,66 +4,642 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
-    <title>Exercicios e Testes</title>
+    <title>Exercicios de APH</title>
     <style>
-        *{
+        * {
             margin: 0%;
-            padding:0%;
+            padding: 0%;
             box-sizing: border-box;
         }
 
-        body{
-            height: 100vh;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #15202F;
+            color: #e0f7fa;
+            line-height: 1.6;
         }
 
-        h1{
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ff0000;
+        header {
+            background-image: linear-gradient(to top, #1e2d42, #2b415f);
+            padding: 2rem 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .ovace {
+            color: rgb(0, 255, 0);
+            text-shadow: 0px 0px 5px rgb(0, 255, 0);
+        }
+
+        main {
+            background-image: linear-gradient(to top, #1e2d42, #2b415f);
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        h1, h2, h4 {
+            color: #00fff7;
+            text-shadow: 0px 0px 5px #00fff7;
+        }
+
+        h3 {
+            color: yellow;
+            text-shadow: 0px 0px 5px yellow;
+            margin: 0.5rem;
+        }
+
+        h4 {
+            color: rgb(255, 170, 0);
+            text-shadow: 0px 0px 5px rgb(255, 166, 0);
+        }
+
+        p {
+            text-indent: 20px;
+            text-align: center;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sinais {
+            color: red;
+            text-shadow: 0px 0px 5px red;
+        }
+
+        section.intro p {
+            font-size: 1.1rem;
+            color: #b2ebf2;
+        }
+
+        footer {
+            background-image: linear-gradient(to top, #1e2d42, #2b415f); 
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 0rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #00e5ff;
+        }
+
+        .hr1 {
+            border: 1px solid rgb(0, 255, 238);
+            box-shadow: 0px 0px 10px rgb(0, 247, 231);
+            margin: 15px 0;
+        }
+
+        .hr2 {
+            border: 1px solid rgb(0, 247, 231);
+            box-shadow: 0px 0px 10px rgb(0, 247, 231);
+        }
+
+        .imagem-heimlich {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .imagem-heimlich img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 2px solid #00fff7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00fff7;
         }
 
         .voltar-inicio {
-            display: flex;
-            justify-content: center;
             text-align: center;
             margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
         }
 
-        .btn-voltar {
-            background-color: #ff0000;
-            color: #ffffff;
+        .btn-voltar, .btn-restart, .btn-start {
+            background-color: #00fff7;
+            color: #15202F;
             padding: 0.7rem 2rem;
             border: none;
             border-radius: 10px;
             text-decoration: none;
-            font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
+            box-shadow: 0 0 10px #00fff7;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .btn-voltar:hover {
-            background-color: #a90101;
+        .btn-voltar:hover, .btn-restart:hover, .btn-start:hover {
+            background-color: #00e0d1;
+            box-shadow: 0 0 15px #00fff7;
             color: white;
         }
 
-        main {
+        .quiz-container {
+            margin: 1rem 0;
+        }
+
+        .question {
+            margin-bottom: 1rem;
+        }
+
+        .options {
             display: flex;
             flex-direction: column;
-            align-items: center;
-        }   
+            gap: 0.5rem;
+        }
+
+        .option {
+            background-color: #2b415f;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #3a5675;
+        }
+
+        .option.selected {
+            background-color: #00fff7;
+            color: #15202F;
+        }
+
+        .btn-next, .btn-submit {
+            background-color: #00fff7;
+            color: #15202F;
+            padding: 0.7rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00fff7;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-next:hover, .btn-submit:hover {
+            background-color: #00e0d1;
+            box-shadow: 0 0 15px #00fff7;
+            color: white;
+        }
+
+        #result {
+            display: none;
+            text-align: center;
+        }
+
+        #start-screen {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Exercicios de Atendimento Pré-Hospitalar (APH)</h1>
+    </header>
     <main>
-        <div><h1>Em Breve!</h1></div>
-
+        <section class="intro">
+            <p>Teste seus conhecimentos sobre Atendimento Pré-Hospitalar! Responda às questões abaixo e veja sua pontuação no final.</p>
+        </section>
+        <hr class="hr1">
+        <div id="start-screen">
+            <button id="start" class="btn-start">Iniciar Quiz</button>
+        </div>
+        <div id="quiz-container" style="display: none;">
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+            <button id="next" class="btn-next">Próxima</button>
+            <button id="submit" class="btn-submit" style="display: none;">Finalizar</button>
+        </div>
+        <div id="result"></div>
         <div class="voltar-inicio">
-            <a href="../index.html" class="btn-voltar">Voltar à Página Inicial</a>
+            <a href="../index.html" id="main-page" class="btn-voltar" style="display: none;">Voltar</a>
+            <a href="#" id="restart" class="btn-restart" style="display: none;">Reiniciar Teste</a>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2025 Quiz de APH. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = [
+                {
+                    question: "Na cena se encontram 2 vitimas: Vitima 1: com Hemorragia Exsanguinante, Vitima 2: Em PCR, qual você atende Primeiro?",
+                    options: [
+                        "Vitima 1",
+                        "Vitima 2",
+                    
+                    ],
+                    correct: 0
+                },
+                {
+                    question: "Em uma vítima inconsciente, qual é o primeiro passo?",
+                    options: [
+                        "Iniciar compressões torácicas",
+                        "Avaliar Sinais Vitais",
+                        "Administrar oxigênio",
+                        "Verificar pressão arterial"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual a frequência correta de compressões torácicas em adultos durante a RCP?",
+                    options: [
+                        "80-100 por minuto",
+                        "100-120 por minuto",
+                        "120-140 por minuto",
+                        "140-160 por minuto"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Durante a RCP em adultos, a profundidade adequada das compressões é:",
+                    options: [
+                        "2 a 2,5 cm",
+                        "3 a 4 cm",
+                        "5 a 6 cm",
+                        "6 a 7 cm"
+                    ],
+                    correct: 2
+                },
+                {
+                    question: "Quando utilizar o desfibrilador externo automático (DEA) durante PCR?",
+                    options: [
+                        "Sempre, mesmo que a vítima respire normalmente",
+                        "Apenas em casos de parada cardiorespiratória confirmada",
+                        "Somente em vítimas com trauma",
+                        "Após administrar medicamentos"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é a proporção compressões/ventilações em RCP para um adulto?",
+                    options: [
+                        "15:2",
+                        "30:2",
+                        "30:1",
+                        "15:1"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Para crianças, qual é a diferença na RCP em relação a adultos?",
+                    options: [
+                        "Maior profundidade das compressões",
+                        "Maior frequência de ventilações",
+                        "Menor profundidade",
+                        "Não se aplica RCP em crianças"
+                    ],
+                    correct: 2
+                },
+                {
+                    question: "O que é prioridade em vítimas de parada cardíorespiratória no APH?",
+                    options: [
+                        "Ventilação com bolsa",
+                        "Compressões torácicas de alta qualidade",
+                        "Administração de medicação",
+                        "Medir pressão arterial"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é o ritmo correto de ventilações em adultos durante RCP sem intubação?",
+                    options: [
+                        "1 ventilação a cada 5 segundos",
+                        "2 ventilações a cada 30 compressões",
+                        "1 ventilação a cada 10 compressões",
+                        "Ventilar continuamente"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Durante uma RCP, qual é a posição adequada das mãos para compressões em adultos?",
+                    options: [
+                        "Uma mão sobre a outra, centro do tórax",
+                        "Apenas uma mão no esterno",
+                        "Uma mão no ombro, outra no tórax",
+                        "Palmas abertas sobre abdômen"
+                    ],
+                    correct: 0
+                },
+                {
+                    question: "Em adultos, após quantos minutos de RCP sem resposta deve-se considerar suporte avançado?",
+                    options: [
+                        "1 minuto",
+                        "5 minutos",
+                        "0 minutos, acionar de imediato",
+                        "15 minutos"
+                    ],
+                    correct: 2
+                },
+                {
+                    question: "Em vítimas inconscientes pós convulção que respiram, a posição adequada é:",
+                    options: [
+                        "Decúbito ventral",
+                        "Decúbito lateral de segurança",
+                        "Sentada",
+                        "Supina com elevação do tronco"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é a frequência recomendada de avaliação da vítima durante o transporte do paciente?",
+                    options: [
+                        "A cada 1 minuto",
+                        "A cada 2 minutos",
+                        "A cada 5 minutos",
+                        "Apenas no início e fim do atendimento"
+                    ],
+                    correct: 2
+                },
+                {
+                    question: "Quando a RCP pode ser interrompida?",
+                    options: [
+                        "Quando a vítima abrir os olhos",
+                        "Quando retornar pulso ou respiração",
+                        "Após 2 minutos",
+                        "Quando chegar o desfibrilador"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é a principal diferença entre BLS e Suporte Avançado de Vida (ALS)?",
+                    options: [
+                        "BLS envolve uso de desfibrilador; ALS não",
+                        "BLS não inclui medicamentos intravenosos ou vias avançadas",
+                        "ALS é somente para crianças",
+                        "Não há diferença, são iguais"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "O que deve ser avaliado durante a checagem da respiração?",
+                    options: [
+                        "Frequência respiratória e saturação",
+                        "Apenas a presença de ar expirado",
+                        "Colorimetria da pele",
+                        "Movimentos torácicos, sons respiratórios, presença de pulso"
+                    ],
+                    correct: 3
+                },
+                {
+                    question: "Em uma vítima de afogamento inconsciente, o primeiro passo é:",
+                    options: [
+                        "Retirar a água do corpo",
+                        "Administrar oxigênio por máscara",
+                        "Avaliar respiração e pulso, iniciar RCP se necessário",
+                        "Colocar em decúbito lateral imediatamente"
+                    ],
+                    correct: 2
+                },
+                {
+                    question: "Qual é o principal objetivo da RCP no APH?",
+                    options: [
+                        "Restaurar a circulação e respiração até chegada do suporte avançado",
+                        "Garantir conforto da vítima",
+                        "Administrar medicações corretivas",
+                        "Evitar qualquer movimentação da vítima"
+                    ],
+                    correct: 0
+                },
+                {
+                    question: "Qual é o primeiro passo ao chegar na cena de uma emergência no APH?",
+                    options: [
+                        "Iniciar a RCP imediatamente",
+                        "Garantir a segurança da cena",
+                        "Chamar a ambulância",
+                        "Realizar uma triagem detalhada"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "O que significa a sigla OVACE?",
+                    options: [
+                        "Obstrução Venosa Aguda do Coração Esquerdo",
+                        "Obstrução de Vias Aéreas por Corpo Estranho",
+                        "Ocorrência de Vias Aéreas Críticas Emergentes",
+                        "Obstrução Vascular Aguda Cerebral"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é a técnica recomendada para desobstrução de vias aéreas em adultos conscientes?",
+                    options: [
+                        "Manobra de Heimlich",
+                        "Compressões torácicas",
+                        "Tapotagem nas costas",
+                        "Ventilação boca-a-boca"
+                    ],
+                    correct: 0
+                },
+                {
+                    question: "Em uma vítima inconsciente, qual é a primeira ação após confirmar a ausência de respiração?",
+                    options: [
+                        "Aplicar um torniquete",
+                        "Iniciar compressões torácicas",
+                        "Administrar adrenalina",
+                        "Realizar ventilação de resgate"
+                    ],
+                    correct: 1
+                },
+                {
+                    question: "Qual é a frequência ideal de compressões torácicas na RCP para adultos?",
+                    options: [
+                        "60-80 por minuto",
+                        "80-100 por minuto",
+                        "100-120 por minuto",
+                        "120-140 por minuto"
+                    ],
+                    correct: 2
+                },
+
+                {
+                    question: "Paciente vitima de uma queda de moto,conciente, aprensenta falas desconexas, responde a estimulo doloroso, qual o Glasgow desse paciente?",
+                    options: [
+                        "Glasgow 13",
+                        "Glasgow 9",
+                        "Glasgow 12",
+                        "Glasgow 10"
+                    ],
+                    correct: 2
+                },
+
+                {
+                    question: "Qual o metodo usado na avaliação secundaria no APH?",
+                    options: [
+                        "SAMPLA",
+                        "XABCDE",
+                        "ATLS",
+                        "START"
+                    ],
+                    correct: 0
+                },
+
+                {
+                    question: "Oque fazer em caso de gestantante com OVACE parcial?",
+                    options: [
+                        "Manobra de Heinlich",
+                        "Golpes Dorsais",
+                        "Compressões Toraxicas",
+                        "Incentivar a Tosse"
+                    ],
+                    correct: 3
+                },
+
+                {
+                    question: "Vitima de atropelamento com Torax instavel, Dificuldade respiratória, Saturação caindo, frequencia respiratória caindo, sudoreico, taquicardico, com perfusão periferica bilateral ausente, oque esse paciente pode ter?  ",
+                    options: [
+                        "Pneumotorax",
+                        "TCE",
+                        "Hemotorax",
+                        "Hipoglicemia"
+                    ],
+                    correct: 3
+                },
+            ];
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let selectedQuestions = [];
+            let userAnswers = [];
+
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            function startQuiz() {
+                const startScreen = document.getElementById('start-screen');
+                const quizContainer = document.getElementById('quiz-container');
+                const result = document.getElementById('result');
+                const restart = document.getElementById('restart');
+                const mainPage = document.getElementById('main-page');
+                const next = document.getElementById('next');
+                const submit = document.getElementById('submit');
+
+                if (!startScreen || !quizContainer || !result || !restart || !mainPage || !next || !submit) {
+                    console.error('One or more DOM elements are missing.');
+                    return;
+                }
+
+                selectedQuestions = shuffle([...questions]).slice(0, 5);
+                currentQuestionIndex = 0;
+                score = 0;
+                userAnswers = new Array(selectedQuestions.length).fill(null);
+                startScreen.style.display = 'none';
+                quizContainer.style.display = 'block';
+                result.style.display = 'none';
+                restart.style.display = 'none';
+                mainPage.style.display = 'none';
+                next.style.display = 'block';
+                submit.style.display = 'none';
+                showQuestion();
+            }
+
+            function showQuestion() {
+                const questionElement = document.getElementById('question');
+                const optionsElement = document.getElementById('options');
+                const nextButton = document.getElementById('next');
+                const submitButton = document.getElementById('submit');
+
+                if (!questionElement || !optionsElement || !nextButton || !submitButton) {
+                    console.error('Required question or button elements are missing.');
+                    return;
+                }
+
+                if (currentQuestionIndex < selectedQuestions.length) {
+                    const q = selectedQuestions[currentQuestionIndex];
+                    questionElement.innerHTML = `<h3>${currentQuestionIndex + 1}. ${q.question}</h3>`;
+                    optionsElement.innerHTML = '';
+                    q.options.forEach((option, index) => {
+                        const div = document.createElement('div');
+                        div.className = 'option';
+                        div.innerHTML = option;
+                        div.onclick = () => selectOption(index, div);
+                        if (userAnswers[currentQuestionIndex] === index) {
+                            div.classList.add('selected');
+                        }
+                        optionsElement.appendChild(div);
+                    });
+                    nextButton.style.display = currentQuestionIndex < selectedQuestions.length - 1 ? 'block' : 'none';
+                    submitButton.style.display = currentQuestionIndex === selectedQuestions.length - 1 ? 'block' : 'none';
+                }
+            }
+
+            function selectOption(index, element) {
+                userAnswers[currentQuestionIndex] = index;
+                const options = document.querySelectorAll('.option');
+                options.forEach(opt => opt.classList.remove('selected'));
+                element.classList.add('selected');
+            }
+
+            function nextQuestion() {
+                if (userAnswers[currentQuestionIndex] === null) {
+                    alert('Por favor, selecione uma resposta antes de continuar.');
+                    return;
+                }
+                currentQuestionIndex++;
+                if (currentQuestionIndex < selectedQuestions.length) {
+                    showQuestion();
+                }
+            }
+
+            function showResult() {
+                if (userAnswers[currentQuestionIndex] === null) {
+                    alert('Por favor, selecione uma resposta antes de finalizar.');
+                    return;
+                }
+
+                const resultElement = document.getElementById('result');
+                const quizContainer = document.getElementById('quiz-container');
+                const next = document.getElementById('next');
+                const submit = document.getElementById('submit');
+                const restart = document.getElementById('restart');
+                const mainPage = document.getElementById('main-page');
+
+                if (!resultElement || !quizContainer || !next || !submit || !restart || !mainPage) {
+                    console.error('Required elements for result display are missing.');
+                    return;
+                }
+
+                score = userAnswers.reduce((acc, answer, index) => {
+                    return answer === selectedQuestions[index].correct ? acc + 1 : acc;
+                }, 0);
+                resultElement.innerHTML = `<h2>Resultado</h2><p>Você acertou ${score} de ${selectedQuestions.length} questões!</p>`;
+                resultElement.style.display = 'block';
+                quizContainer.style.display = 'none';
+                next.style.display = 'none';
+                submit.style.display = 'none';
+                restart.style.display = 'inline-block';
+                mainPage.style.display = 'inline-block';
+            }
+
+            const startButton = document.getElementById('start');
+            const nextButton = document.getElementById('next');
+            const submitButton = document.getElementById('submit');
+            const restartButton = document.getElementById('restart');
+
+            if (startButton && nextButton && submitButton && restartButton) {
+                startButton.onclick = startQuiz;
+                nextButton.onclick = nextQuestion;
+                submitButton.onclick = showResult;
+                restartButton.onclick = startQuiz;
+            } else {
+                console.error('One or more button elements are missing.');
+            }
+        });
+    </script>
 </body>
 </html>
