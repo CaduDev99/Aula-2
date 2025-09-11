@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia Humana - Índice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #b92929;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #c0392b;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .intro h2 {
+            color: #c0392b;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: white;
+            width: calc(33.33% - 1rem);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card h3 {
+            padding: 1rem;
+            font-size: 1.2rem;
+            color: #c0392b;
+        }
+
+        .card p {
+            padding: 0 1rem 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .card a {
+            display: block;
+            text-align: center;
+            padding: 0.5rem;
+            background-color: #b92929;
+            color: white;
+            text-decoration: none;
+            margin: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #b92929;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+
+            .card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anatomia Humana</h1>
+        <nav>
+            <a href="sistema-esqueletico.html">Sistema Esquelético</a>
+            <a href="sistema-muscular.html">Sistema Muscular</a>
+            <a href="sistema-nervoso.html">Sistema Nervoso</a>
+            <a href="sistema-respiratorio.html">Sistema Respiratório</a>
+            <a href="sistema-circulatorio.html">Sistema Circulatório</a>
+            <a href="sistema-digestivo.html">Sistema Digestivo</a>
+            <a href="sistema-endocrino.html">Sistema Endócrino</a>
+            <a href="sistema-urinario.html">Sistema Urinário</a>
+            <a href="sistema-imunologico.html">Sistema Imunológico</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Bem-vindo ao Estudo da Anatomia Humana</h2>
+            <p>A anatomia humana é a ciência que estuda a estrutura e organização do corpo humano, abrangendo sistemas como o esquelético, muscular, nervoso, respiratório, circulatório, digestivo, endócrino, urinário e imunológico. Esta plataforma oferece módulos detalhados sobre cada sistema, com informações técnicas, divisões anatômicas e curiosidades. Clique nos cards abaixo para explorar!</p>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <img src="assets/esqueleto.png" alt="Sistema Esquelético">
+                <h3>Sistema Esquelético</h3>
+                <p>Explore os ossos que formam a estrutura do corpo, divididos em esqueleto axial e apendicular.</p>
+                <a href="sistema-esqueletico.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/musculo.png" alt="Sistema Muscular">
+                <h3>Sistema Muscular</h3>
+                <p>Conheça os músculos responsáveis pelo movimento, incluindo tipos esqueléticos, lisos e cardíacos.</p>
+                <a href="sistema-muscular.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/nervo.png" alt="Sistema Nervoso">
+                <h3>Sistema Nervoso</h3>
+                <p>Descubra como o cérebro, medula espinhal e nervos controlam o corpo.</p>
+                <a href="sistema-nervoso.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/respiratorio.png" alt="Sistema Respiratório">
+                <h3>Sistema Respiratório</h3>
+                <p>Entenda como os pulmões e vias respiratórias realizam a troca gasosa.</p>
+                <a href="sistema-respiratorio.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/circulatorio.png" alt="Sistema Circulatório">
+                <h3>Sistema Circulatório</h3>
+                <p>Explore o coração e os vasos sanguíneos que transportam nutrientes e oxigênio.</p>
+                <a href="sistema-circulatorio.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/digestivo.png" alt="Sistema Digestivo">
+                <h3>Sistema Digestivo</h3>
+                <p>Conheça os órgãos que processam alimentos e absorvem nutrientes.</p>
+                <a href="sistema-digestivo.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/endocrino.png" alt="Sistema Endócrino">
+                <h3>Sistema Endócrino</h3>
+                <p>Descubra como as glândulas regulam funções corporais por meio de hormônios.</p>
+                <a href="sistema-endocrino.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/urinario.png" alt="Sistema Urinário">
+                <h3>Sistema Urinário</h3>
+                <p>Entenda como os rins filtram o sangue e regulam o equilíbrio hídrico.</p>
+                <a href="sistema-urinario.html">Acessar Módulo</a>
+            </div>
+            <div class="card">
+                <img src="assets/imunologico.png" alt="Sistema Imunológico">
+                <h3>Sistema Imunológico</h3>
+                <p>Explore como o corpo se defende contra patógenos e infecções.</p>
+                <a href="sistema-imunologico.html">Acessar Módulo</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Anatomia Humana. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
