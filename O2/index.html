@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração de Oxigênio no APH</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        header {
+            background-color: #d40000;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 20px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: #1E90FF;
+            font-size: 1.8em;
+            margin-top: 30px;
+            border-bottom: 2px solid #1E90FF;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #ff0000;
+            font-size: 1.4em;
+            margin-top: 20px;
+        }
+        p {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff0000;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8faff;
+        }
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .note {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 5px solid #1E90FF;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #1E90FF;
+            font-size: 0.95em;
+            padding: 10px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff1e1e;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #c01515;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table {
+                font-size: 0.85em;
+            }
+            .back-button {
+                width: 150px;
+                font-size: 1em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Administração de Oxigênio</h1>
+    </header>
+    <div class="container">
+        <p>A administração de oxigênio (O2) no Atendimento Pré-Hospitalar (APH) é uma intervenção fundamental para pacientes com hipoxemia ou em emergências que afetam a oxigenação tecidual. Este conteúdo expandido, baseado em protocolos e diretrizes médicas atualizadas, incluindo fontes brasileiras e internacionais, visa fornecer orientação detalhada para profissionais como paramédicos, enfermeiros e bombeiros. O foco é no suporte respiratório imediato, com ênfase em estabilização pré-hospitalar.</p>
+
+        <h2>1. Conceitos Básicos e Importância</h2>
+        <p>A oxigenoterapia envolve a administração suplementar de oxigênio para corrigir ou prevenir a hipoxemia, definida como PaO2 < 60 mmHg ou SpO2 < 90% em ar ambiente. No APH, isso é vital, pois emergências como traumas, infartos ou insuficiência respiratória aguda podem levar a hipoxia tecidual rapidamente, aumentando o risco de danos orgânicos irreversíveis.</p>
+
+        <h3>1.1 Fisiologia da Oxigenação</h3>
+        <p>O oxigênio é transportado pelo sangue via hemoglobina (97%) e dissolvido no plasma (3%). A hipoxemia pode resultar de: hipoventilação (ex.: obstrução de vias aéreas), mismatch V/Q (ex.: pneumonia), shunt (ex.: edema pulmonar) ou difusão alterada (ex.: fibrose pulmonar). Sinais clínicos incluem taquipneia (>20 rpm), cianose, confusão mental, taquicardia e uso de musculatura acessória. A SpO2 é monitorada por oxímetro de pulso, mas pode ser imprecisa em choque periférico ou intoxicação por CO.</p>
+
+        <h3>1.2 Objetivos e Princípios</h3>
+        <p>Manter SpO2 entre 94-98% para a maioria dos pacientes, ou 88-92% em casos de risco de hipercapnia (ex.: DPOC crônica), conforme diretrizes da British Thoracic Society (BTS). O O2 é considerado um medicamento: prescreva com dose (fluxo/FiO2), via e monitoramento para evitar toxicidade. No Brasil, segue protocolos do Ministério da Saúde e SAMU, enfatizando uso racional para otimizar recursos em ambulâncias.</p>
+
+        <h2>2. Indicações para Administração de O2 no APH</h2>
+        <p>Indicações baseiam-se em avaliação clínica e oximetria. Suplementar O2 em qualquer suspeita de hipoxia, ajustando conforme resposta.</p>
+        <ul>
+            <li><strong>Emergências Respiratórias</strong>: Asma grave (iniciar com máscara não reinalante a 10-15 L/min), pneumonia, exacerbação de DPOC (iniciar baixo fluxo, 1-2 L/min via cateter nasal para evitar retenção de CO2), edema pulmonar agudo.</li>
+            <li><strong>Cardiovasculares</strong>: Infarto agudo do miocárdio (se SpO2 <94%), choque cardiogênico ou hipovolêmico (alto fluxo inicial).</li>
+            <li><strong>Traumas</strong>: TCE (manter SpO2 >94% para evitar hipoxia cerebral), trauma torácico (pneumotórax, hemotórax), hemorragia maciça.</li>
+            <li><strong>Outras</strong>: Intoxicação por CO (100% O2 via máscara não reinalante), afogamento, sepse, anafilaxia, ou SpO2 <94% em ar ambiente.</li>
+        </ul>
+        <p><strong>Contraindicações</strong>: Absolutas raras (ex.: para-oxigênio em mergulhadores); relativas incluem DPOC com hipercapnia (monitorar pCO2 se possível) e pacientes normoxêmicos sem indicação, para evitar hiperoxia.</p>
+
+        <h2>3. Dispositivos e Sistemas de Administração de O2</h2>
+        <p>Dispositivos portáteis em APH variam por FiO2 e condição do paciente. Em ambulâncias, use cilindros (E ou M, capacidade 680-3400 L) com reguladores de fluxo. Calcule autonomia: (Pressão residual x Fator de conversão) / Fluxo (ex.: cilindro E, fator 0.28; pressão 1000 psi, fluxo 10 L/min = ~28 min).</p>
+        <table>
+            <tr>
+                <th>Dispositivo</th>
+                <th>Descrição</th>
+                <th>FiO2 Aproximada</th>
+                <th>Fluxo Recomendado</th>
+                <th>Indicações Principais</th>
+                <th>Cuidados e Limitações</th>
+            </tr>
+            <tr>
+                <td><strong>Cateter Nasal</strong></td>
+                <td>Tubo bifurado nas narinas; permite falar/comer.</td>
+                <td>24-44%</td>
+                <td>1-6 L/min</td>
+                <td>Hipoxemia leve; crônicos como DPOC.</td>
+                <td>Seca mucosas (use umidificador se >4 L/min); ineficaz em respiração bucal ou apneia.</td>
+            </tr>
+            <tr>
+                <td><strong>Máscara Simples</strong></td>
+                <td>Máscara facial plástica.</td>
+                <td>35-60%</td>
+                <td>5-10 L/min</td>
+                <td>Hipoxemia moderada; curto prazo em emergências.</td>
+                <td>Permite reinalação CO2; não usar <5 L/min para evitar asfixia.</td>
+            </tr>
+            <tr>
+                <td><strong>Máscara com Reservatório</strong></td>
+                <td>Com bolsa que armazena O2.</td>
+                <td>60-90% (até 100% se bolsa cheia)</td>
+                <td>10-15 L/min</td>
+                <td>Hipoxemia grave; choque, trauma.</td>
+                <td>Verifique bolsa inflada >2/3; risco de barotrauma se mal ajustada.</td>
+            </tr>
+            <tr>
+                <td><strong>Máscara Venturi</strong></td>
+                <td>Adaptadores coloridos controlam FiO2 precisa.</td>
+                <td>24-50%</td>
+                <td>4-12 L/min (ex.: azul 24% a 2-4 L/min)</td>
+                <td>DPOC, risco hipercapnia; controle exato.</td>
+                <td>Ideal para titulação; verifique cor correta.</td>
+            </tr>
+            <tr>
+                <td><strong>Bolsa-Valva-Máscara (BVM)</strong></td>
+                <td>Para ventilação manual; com válvula unidirecional.</td>
+                <td>Até 100% com O2</td>
+                <td>10-15 L/min</td>
+                <td>Apneia, suporte ventilatório; pré-intubação.</td>
+                <td>Requer selo facial; risco hiperinsuflação gástrica; use PEEP em 5-10 cmH2O se disponível.</td>
+            </tr>
+            <tr>
+                <td><strong>Ventilador Portátil</strong></td>
+                <td>Mecânico em UTIs móveis; modos como CPAP/BiPAP.</td>
+                <td>Variável (21-100%)</td>
+                <td>Programável</td>
+                <td>Insuficiência respiratória prolongada; transporte.</td>
+                <td>Monitore ETCO2; treinamento avançado necessário.</td>
+            </tr>
+        </table>
+
+        <h2>4. Protocolos e Técnicas de Administração</h2>
+        <p>Siga protocolos como PHTLS, ATLS, BLS/AHA ou brasileiros do SAMU/CBMDF.</p>
+        <h3>4.1 Passos Detalhados</h3>
+        <ol>
+            <li><strong>Avaliação XABCDE</strong>: Assegure via aérea patente (manobra head-tilt/chin-lift ou jaw-thrust em trauma); avalie respiração (frequência, profundidade, SpO2, ETCO2 se disponível).</li>
+            <li><strong>Seleção e Início</strong>: Se SpO2 <90%, inicie alto fluxo (15 L/min via não reinalante); titule para meta.</li>
+            <li><strong>Administração Prática</strong>: Posicione em Fowler (45-60°) se consciente; conecte ao cilindro, ajuste fluxo; umidifique se >4 L/min para conforto.</li>
+            <li><strong>Monitoramento</strong>: Reavalie SpO2 a cada 5 min; ajuste fluxo mínimo eficaz; documente em prontuário APH.</li>
+            <li><strong>Transporte e Handoff</strong>: Mantenha O2 durante transferência; informe hospital sobre dose, duração e resposta.</li>
+        </ol>
+        <h3>4.2 Protocolos Específicos</h3>
+        <ul>
+            <li><strong>DPOC</strong>: Inicie Venturi 24-28% (2-4 L/min); monitore por sonolência (sinal de hipercapnia).</li>
+            <li><strong>Trauma</strong>: 100% O2 inicial em hipoxemia; evite em normoxêmicos para prevenir radicais livres.</li>
+            <li><strong>Pré-Oxigenação</strong>: Para intubação, use BVM com 100% O2 por 3-5 min; apneia segura até 8 min em adultos saudáveis.</li>
+            <li><strong>No Brasil</strong>: Conforme Resolução COFEN 713/2022, enfermeiros podem iniciar O2 em APH sob protocolos.</li>
+        </ul>
+
+        <h2>5. Riscos e Complicações</h2>
+        <p>O O2 excessivo pode ser prejudicial:</p>
+        <ul>
+            <li><strong>Hiperoxia</strong>: SpO2 >98% causa vasoconstrição coronária, aumenta mortalidade em IAM e AVC.</li>
+            <li><strong>Supressão Respiratória</strong>: Em DPOC, alto FiO2 reduz drive hipóxico, levando a acidose.</li>
+            <li><strong>Toxicidade Pulmonar</strong>: Exposição prolongada (>24h a FiO2 >60%) causa atelectasia absorção ou fibrose.</li>
+            <li><strong>Operacionais</strong>: Risco de incêndio (O2 suporta combustão); secura nasal/oral; aspiração em vômito.</li>
+            <li><strong>Evidências</strong>: Estudos mostram que O2 rotineiro em normoxêmicos não melhora outcomes e pode piorar.</li>
+        </ul>
+
+        <h2>6. Cuidados e Treinamento</h2>
+        <ul>
+            <li><strong>Manutenção</strong>: Inspeção diária de cilindros (pressão >500 psi), tubos e máscaras; esterilização pós-uso.</li>
+            <li><strong>Treinamento</strong>: Certificações BLS/ALS; simulações em cenários APH; ênfase em titulação.</li>
+            <li><strong>Aspectos Legais</strong>: No Brasil, segue CFM, COFEN e protocolos MS; documentação obrigatória para auditoria.</li>
+        </ul>
+
+        <h2>7. Populações Especiais</h2>
+        <ul>
+            <li><strong>Pediátricos</strong>: Use máscaras infantis; fluxo 1-4 L/min; meta SpO2 94-98%; evite hiperoxia em prematuros (risco retinopatia).</li>
+            <li><strong>Gestantes</strong>: Manter SpO2 >95% para fetal; posição lateral esquerda em trauma.</li>
+            <li><strong>Idosos</strong>: Maior risco de delirium por hipoxia; titule cautelosamente em comorbidades.</li>
+            <li><strong>Obesos</strong>: Use CPAP se disponível para via aérea obstrutiva.</li>
+        </ul>
+
+        <h2>8. Evidências Científicas e Atualizações</h2>
+        <p>Diretrizes TSANZ e BTS enfatizam uso alvo-dirigido, evitando O2 rotineiro em normoxêmicos. No Brasil, manuais CBMDF e protocolos MS promovem otimização de O2 em pandemias como COVID-19. Estudos recentes (ex.: AHA 2010-2025) mostram redução de O2 suplementar em dor torácica sem hipoxia.</p>
+
+        <div class="note">
+            <p>Este conteúdo é informativo e não substitui treinamento. Consulte fontes primárias para atualizações.</p>
+        </div>
+
+        <a href="../index.html" class="back-button">Voltar</a>
+
+        <footer>
+            <p>Desenvolvido com base em diretrizes médicas e protocolos brasileiros/internacionais - 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
