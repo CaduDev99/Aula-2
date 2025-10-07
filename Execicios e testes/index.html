@@ -5,202 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/Favicon.png" type="image/x-icon">
     <title>Exercicios de APH</title>
-    <style>
-        * {
-            margin: 0%;
-            padding: 0%;
-            box-sizing: border-box;
-        }
+   <style>
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #15202F;
-            color: #e0f7fa;
-            line-height: 1.6;
-        }
+    /* Estilo do corpo da página */
+    body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte mais profissional */
+        background-color: #ffffff; /* Branco principal */
+        color: #333333; /* Cor de texto padrão (cinza escuro para melhor legibilidade) */
+        line-height: 1.6;
+    }
 
-        header {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f);
-            padding: 2rem 0;
-            text-align: center;
-            color: #ffffff;
-        }
+    /* Cabeçalho */
+    header {
+        /* Gradiente do Azul Escuro ao Vermelho Sóbrio */
+        background-image: linear-gradient(to right, #003366, #C82333);
+        padding: 1.5rem 0; /* Espaçamento ajustado */
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
 
-        .ovace {
-            color: rgb(0, 255, 0);
-            text-shadow: 0px 0px 5px rgb(0, 255, 0);
-        }
+    /* Classes e elementos específicos no cabeçalho/títulos */
+    h1 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin: 0;
+        text-shadow: none; /* Removido o text-shadow para um visual mais limpo */
+    }
 
-        main {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f);
-            max-width: 800px;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
+    .ovace {
+        color: #FFD700; /* Destaque em Amarelo/Dourado (opcional, para um toque extra) ou #ffffff */
+    }
 
-        h1, h2, h4 {
-            color: #00fff7;
-            text-shadow: 0px 0px 5px #00fff7;
-        }
+    /* Conteúdo Principal */
+    main {
+        background-color: #f8f9fa; /* Branco/Cinza claro para o fundo do conteúdo */
+        max-width: 900px; /* Largura máxima um pouco maior para conteúdo */
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 8px; /* Cantos arredondados */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+    }
 
-        h3 {
-            color: yellow;
-            text-shadow: 0px 0px 5px yellow;
-            margin: 0.5rem;
-        }
+    /* Títulos do Conteúdo */
+    h2, h3, h4 {
+        color: #ffffff; /* Títulos em Azul Escuro */
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        text-shadow: none;
+        border-bottom: 2px solid #C82333; /* Linha de destaque em Vermelho Sóbrio */
+        padding-bottom: 0.5rem;
+    }
 
-        h4 {
-            color: rgb(255, 170, 0);
-            text-shadow: 0px 0px 5px rgb(255, 166, 0);
-        }
+    h3 {
+        color: #C82333; /* Subtítulos em Vermelho Sóbrio */
+        font-size: 1.25rem;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 
-        p {
-            text-indent: 20px;
-            text-align: center;
-        }
+    p {
+        text-indent: 0; /* Removida a indentação para alinhamento profissional */
+        text-align: left; /* Alinhamento à esquerda (mais comum em textos profissionais) */
+        margin-bottom: 1rem;
+        color: #089b00;
+    }
 
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
+    /* Listas */
+    ul, ol {
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
 
-        .sinais {
-            color: red;
-            text-shadow: 0px 0px 5px red;
-        }
+    /* Destaques (Sinais) */
+    .sinais {
+        color: #C82333; /* Destaque importante em Vermelho Sóbrio */
+        font-weight: bold;
+        text-shadow: none;
+    }
 
-        section.intro p {
-            font-size: 1.1rem;
-            color: #b2ebf2;
-        }
+    /* Seção de Introdução */
+    section.intro p {
+        font-size: 1.15rem;
+        color: #003366; /* Destaque no parágrafo de introdução */
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
-        footer {
-            background-image: linear-gradient(to top, #1e2d42, #2b415f); 
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 0rem;
-            font-size: 0.9rem;
-            border-top: 1px solid #00e5ff;
-        }
+    /* Rodapé */
+    footer {
+        background-color: #003366; /* Azul Escuro no rodapé */
+        color: #ffffff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        border-top: 3px solid #C82333; /* Linha de destaque em Vermelho Sóbrio */
+    }
 
-        .hr1 {
-            border: 1px solid rgb(0, 255, 238);
-            box-shadow: 0px 0px 10px rgb(0, 247, 231);
-            margin: 15px 0;
-        }
+    /* Linhas Divisórias */
+    .hr1, .hr2 {
+        border: 0;
+        height: 1px;
+        background-color: #C82333; /* Divisores em Vermelho Sóbrio */
+        margin: 20px 0;
+    }
 
-        .hr2 {
-            border: 1px solid rgb(0, 247, 231);
-            box-shadow: 0px 0px 10px rgb(0, 247, 231);
-        }
+    /* Imagem */
+    .imagem-heimlich {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
 
-        .imagem-heimlich {
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
+    .imagem-heimlich img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border: 4px solid #003366; /* Borda em Azul Escuro */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra mais definida */
+    }
 
-        .imagem-heimlich img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border: 2px solid #00fff7;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00fff7;
-        }
+    /* Botões de Ação (Voltar, Reiniciar, Iniciar) */
+    .voltar-inicio {
+        text-align: center;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
 
-        .voltar-inicio {
-            text-align: center;
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
+    .btn-voltar, .btn-restart, .btn-start {
+        background-color: #C82333; /* Botões em Vermelho Sóbrio */
+        color: #ffffff;
+        padding: 0.8rem 2.5rem;
+        border: none;
+        border-radius: 5px; /* Bordas menos arredondadas */
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase; /* Texto em maiúsculas */
+        letter-spacing: 0.5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+    }
 
-        .btn-voltar, .btn-restart, .btn-start {
-            background-color: #00fff7;
-            color: #15202F;
-            padding: 0.7rem 2rem;
-            border: none;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 0 10px #00fff7;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    .btn-voltar:hover, .btn-restart:hover, .btn-start:hover {
+        background-color: #A31E29; /* Tom mais escuro ao passar o mouse */
+        transform: translateY(-2px);
+    }
 
-        .btn-voltar:hover, .btn-restart:hover, .btn-start:hover {
-            background-color: #00e0d1;
-            box-shadow: 0 0 15px #00fff7;
-            color: white;
-        }
+    /* Estilos do Quiz */
+    .quiz-container {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #ffffff;
+    }
 
-        .quiz-container {
-            margin: 1rem 0;
-        }
+    .question {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #003366;
+    }
 
-        .question {
-            margin-bottom: 1rem;
-        }
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+    .option {
+        background-color: #003366; /* Opções em Azul Escuro */
+        color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: 500;
+    }
 
-        .option {
-            background-color: #2b415f;
-            padding: 0.8rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    .option:hover {
+        background-color: #004080; /* Azul um pouco mais claro ao passar o mouse */
+    }
 
-        .option:hover {
-            background-color: #3a5675;
-        }
+    .option.selected {
+        background-color: #C82333; /* Opção selecionada em Vermelho Sóbrio */
+        color: #ffffff;
+    }
 
-        .option.selected {
-            background-color: #00fff7;
-            color: #15202F;
-        }
+    /* Botões de Navegação do Quiz */
+    .btn-next, .btn-submit {
+        background-color: #C82333; /* Vermelho Sóbrio */
+        color: #ffffff;
+        padding: 0.8rem 2.5rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        .btn-next, .btn-submit {
-            background-color: #00fff7;
-            color: #15202F;
-            padding: 0.7rem 2rem;
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 0 10px #00fff7;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .btn-next:hover, .btn-submit:hover {
+        background-color: #A31E29;
+    }
 
-        .btn-next:hover, .btn-submit:hover {
-            background-color: #00e0d1;
-            box-shadow: 0 0 15px #00fff7;
-            color: white;
-        }
+    #result {
+        display: none;
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        color: #cacaca;
+    }
 
-        #result {
-            display: none;
-            text-align: center;
-        }
+    #start-screen {
+        text-align: center;
+        padding: 2rem;
+    }
 
-        #start-screen {
-            text-align: center;
-        }
-    </style>
+    h2 {
+    color: #ffffff; /* Cor padrão dos títulos H2/H3/H4 */
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-shadow: none;
+    border-bottom: 2px solid #C82333; /* Linha de destaque em Vermelho Sóbrio */
+    padding-bottom: 0.5rem;
+}
+
+#result h2 {
+    color: #C82333; /* Vermelho Sóbrio */
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #003366; 
+    padding-bottom: 0.5rem;
+    text-shadow: none;
+}
+
+.foot{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+</style>
 </head>
 <body>
     <header>
@@ -227,7 +291,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Quiz de APH. Todos os direitos reservados.</p>
+        <p class="foot">&copy; 2025 Quiz de APH. Todos os direitos reservados.</p>
     </footer>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
