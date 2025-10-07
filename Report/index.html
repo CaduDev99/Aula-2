@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar Problema</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  border: 2px solid #b30000;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(179, 0, 0, 0.2);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1.5px solid #b30000;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 20px;
+  background: #b30000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background: #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+#statusMessage {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+  </style>
+  <link rel="stylesheet" href="reportar.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("v35eDRa3vccWvz_kF"); 
+      emailjs.send("service_v3pqsyl", "template_zggprje")
+        .then(function() {
+          console.log("Email enviado com sucesso!");
+        }, function(error) {
+          console.error("Erro ao enviar email:", error);
+        });
+    })();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Reportar Problema</h1>
+    <form id="reportForm">
+      <label for="name">Seu Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+      <label for="message">Descreva o Problema:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Explique o que ocorreu..." required></textarea>
+
+      <button type="submit">Enviar Report</button>
+    </form>
+
+    <p id="statusMessage"></p>
+  </div>
+
+  <script>
+    document.getElementById("reportForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const templateParams = {
+        from_name: document.getElementById("name").value,
+        message: document.getElementById("message").value,
+        to_email: "carloseduardo06091999@gmail.com"
+      };
+
+      emailjs.send("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", templateParams)
+        .then(function() {
+          document.getElementById("statusMessage").textContent = "✅ Report enviado com sucesso!";
+          document.getElementById("reportForm").reset();
+
+          setTimeout(() => {
+            window.location.href = "index.html"; // 🔁 volta para a página inicial
+          }, 2000);
+        }, function(error) {
+          document.getElementById("statusMessage").textContent = "❌ Erro ao enviar. Tente novamente.";
+          console.error("Erro:", error);
+        });
+    });
+  </script>
+</body>
+</html>
